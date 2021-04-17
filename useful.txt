@@ -1,0 +1,100 @@
+// TEMPLATE
+// LINEAR SIEVE:
+
+const int nn = 1e6;
+int lp[nn+1];
+vector<int> sieve(){
+	vector<int> pr;
+	for (int i=2; i<=nn; ++i) {
+		if (lp[i] == 0) {
+			lp[i] = i;
+			pr.push_back (i);
+		}
+		for (int j=0; j<(int)pr.size() && pr[j]<=lp[i] && i*pr[j]<=nn; ++j)
+			lp[i * pr[j]] = pr[j];
+	}
+	return pr;
+}
+
+// factmod
+const int mod = 1e9;
+int factmod(int n) {
+    int p = mod;
+    vector<int> f(p);
+    f[0] = 1;
+    for (int i = 1; i < p; i++)
+        f[i] = f[i-1] * i % p;
+
+    int res = 1;
+    while (n > 1) {
+        if ((n/p) % 2)
+            res = p - res;
+        res = res * f[n%p] % p;
+        n /= p;
+    }
+    return res; 
+}
+
+// ncr
+int nCr(int n, int r){
+    if(r>n) return 0;
+    return factmod(n) / (factmod(r)*factmod(n-r));
+}
+// npr
+int nPr(int n, int r){
+	if(r>n) return 0;
+	return factmod(n) / factmod(n-r);
+}
+
+// mod int mint
+const int mod = 1000000007;
+struct mint {
+  unsigned int xx;
+  mint(): xx(0) {}
+  mint(long long xx):xx((xx%mod+mod)%mod) {}
+  mint operator-() const { return mint(0) - *this; }
+  mint operator~() const { return mint(1) / *this; }
+  mint& operator+=(const mint& a) { if((xx+=a.xx)>=mod) xx-=mod; return *this; }
+  mint& operator-=(const mint& a) { if((xx+=mod-a.xx)>=mod) xx-=mod; return *this; }
+  mint& operator*=(const mint& a) { xx=(unsigned long long)xx*a.xx%mod; return *this; }
+  mint& operator/=(const mint& a) { xx=(unsigned long long)xx*a.pow(mod-2).xx%mod; return *this; }
+  mint operator+(const mint& a) const { return mint(*this) += a; }
+  mint operator-(const mint& a) const { return mint(*this) -= a; }
+  mint operator*(const mint& a) const { return mint(*this) *= a; }
+  mint operator/(const mint& a) const { return mint(*this) /= a; }
+  mint pow(long long t) const {
+    if(!t) return 1;
+    mint res = pow(t/2);
+    res *= res;
+    return (t&1)?res*xx:res;
+  }
+  bool operator<(const mint& a) const { return xx < a.xx; }
+  bool operator==(const mint& a) const { return xx == a.xx; }
+  bool operator!=(const mint& a) const { return xx != a.xx; }
+};
+istream& operator>>(istream& i, mint& a) { i>>a.xx; return i; }
+ostream& operator<<(ostream& o, const mint& a) { o<<a.xx; return o; }
+
+// mod add
+void add(int& a, int b){
+    a+=b;
+    if(a>=mod){
+        a-=mod;
+    }
+}
+
+// HASH
+struct HASH {
+    static uint64_t splitmixx64(uint64_t xx) {
+        xx += 0xx9e3779b97f4a7c15;
+        xx = (xx ^ (xx >> 30)) * 0xxbf58476d1ce4e5b9;
+        xx = (xx ^ (xx >> 27)) * 0xx94d049bb133111eb;
+        return xx ^ (xx >> 31);
+    }
+    size_t operator()(uint64_t xx) const {
+        static const uint64_t FIXED_RANDOM = chrono::steady_clock::now().time_since_epoch().count();
+        return splitmixx64(xx + FIXED_RANDOM);
+    }
+};
+
+// pair hash
