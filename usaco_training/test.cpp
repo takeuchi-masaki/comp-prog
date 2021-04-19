@@ -3,76 +3,53 @@ ID: themasa1
 TASK: test
 LANG: C++14
 */
-#include <bits/stdc++.h>
+// #include <bits/stdc++.h>
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <algorithm>
+
 using namespace std;
 ifstream fin ("test.in");
 ofstream fout ("test.out");
 
-const int MAX = 12;
-
-int N;
-int X[MAX+1], Y[MAX+1];
-int partner[MAX+1];
-int next_right[MAX+1];
-
-bool check(){
-    // for(int i = 1; i <= N; i++){
-    //     fout << i << ':' << partner[i] << " ";
-    // }
-    // fout << endl;
-    for(int start = 1; start <= N; start++){
-        int pos = partner[next_right[start]];
-        for(int i = 0; i < N; i++){
-            pos = partner[next_right[pos]];
-            if(pos==0) break;
-        }
-        if(pos!=0) return true;
-    }
-    return false;
-}
-
-int solve(){
-    int res = 0, i = 1;
-    for(i; i<=N; i++){
-        if(partner[i]==0) break;
-    }
-
-    if(i>N){
-        if(check()){
-            return 1;
-        }
-        return 0;
-    }
-    
-    for(int j = i+1; j<=N; j++){
-        if(partner[j]==0) {
-            partner[i] = j;
-            partner[j] = i;
-            res += solve();
-            partner[i] = partner[j] = 0;
-        }
-    }
-    return res;
-}
-
 int main() {
-    fin >> N;
-    for(int i = 1; i <= N; i++){
-        fin >> X[i] >> Y[i];
-    }
-
-    // find next right portals
-    for(int i = 1; i<=N; i++){
-        for(int j = 1; j<=N; j++){
-            if( Y[i] == Y[j] && X[i] < X[j] ){
-                if( next_right[i]==0 || X[j] < X[next_right[i]] ) {
-                    next_right[i] = j;
-                }
+    int n; fin >> n;
+    vector<int> h(n);
+    for(int&i:h)fin>>i;
+    sort(h.begin(), h.end());
+    int minh = h[0], maxh = h[n-1];
+    int res = 0;
+    // auto it = upper_bound(h.begin(),h.end(),minh);
+    // fout << it-h.begin() << ' ' << *it << '\n';
+    int cnt = 0;
+    while(maxh-minh>17){
+        // if(cnt++>10) break;
+        // fout << minh << ' ' << maxh << ' ' << maxh-minh << '\n';
+        auto nextMin = upper_bound(h.begin(), h.end(), minh);
+        int nextMinH = min(*nextMin, maxh-17);
+        auto nextMax = lower_bound(h.begin(), h.end(), maxh)--;
+        nextMax--;
+        int nextMaxH = max(*nextMax, minh+17);
+        // fout << nextMinH << ' ' << nextMaxH << '\n';
+        int lower = (nextMin - h.begin()) * (nextMinH-minh);
+        int upper = (h.end() - nextMax - 1) * (maxh-nextMaxH);
+        // fout << lower << ' ' << upper <<  '\n';
+        if(lower<=upper){
+            res+=lower*lower;
+            auto it = h.begin();
+            for( ; it != nextMin; it++){
+                *it = nextMinH;
+            }
+        } else {
+            res+=upper*upper;
+            auto it = nextMax++;
+            for( ; it!=h.end(); it++){
+                *it = nextMaxH;
             }
         }
+        minh = h[0], maxh = h[n-1];
     }
-
-    fout << solve() << '\n';
-    
+    fout << res << '\n';
     return 0;
 }
