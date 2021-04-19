@@ -6,3 +6,6 @@
 *.db
 atCoder/.vs/atCoder/v16/.suo
 *.exe
+usaco_training/test.dSYM/Contents/Info.plist
+usaco_training/test.dSYM/Contents/Resources/DWARF/test
+*.bin
