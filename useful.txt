@@ -45,6 +45,16 @@ int nPr(int n, int r){
 	if(r>n) return 0;
 	return factmod(n) / factmod(n-r);
 }
+// ncr2
+int nCr(int n, int r){
+	if(r>n) return 0;
+	long long ans = 1;
+	for(int i = 1; i <= r; i++){
+		ans *= n-i;
+		ans /= i;
+	}
+	return ans;
+}
 
 // mod int mint
 const int mod = 1000000007;
