@@ -23,13 +23,18 @@ bool check(vector<vector<bool>>& cmp){
 
 vector<vector<bool>> rotate(vector<vector<bool>>& v){
     vector<vector<bool>> ret(n, vector<bool>(n));
-    for(int i = 0; i < n; i++){
-        for(int j = 0; j < n; j++){
-            int i2 = n-1-j, j2 = i;
-            ret[i][j] = v[i2][j2];
-            // fout << ret[i][j];
+    // for(int i = 0; i < n; i++){
+    //     for(int j = 0; j < n; j++){
+    //         int i2 = n-1-j, j2 = i;
+    //         ret[i][j] = v[i2][j2];
+    //         // fout << ret[i][j];
+    //     }
+    //     // fout << endl;
+    // }
+    for(int j = 0; j < n; j++){
+        for(int i = n-1; i >= 0; i--){
+            ret[j][n-1-i] = v[i][j];
         }
-        // fout << endl;
     }
     return ret;
 }
