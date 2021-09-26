@@ -1,4 +1,6 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <iomanip>
+#include <vector>
 using namespace std;
 
 double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
@@ -27,9 +29,9 @@ double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
         int i = (imin + imax)>>1;
         int j = half-i;
         if(i>0 && arr1[i-1] > arr2[j]){
-            imax-=1;
+            imax = i-1;
         } else if(i<m && arr1[i] < arr2[j-1]){
-            imin+=1;
+            imin = i+1;
         } else{
             int maxLeft, minRight;
             if(i==0){
