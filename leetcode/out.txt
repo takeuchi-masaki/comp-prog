@@ -1,1 +1,6 @@
+<<<<<<< Updated upstream
 3
+=======
+-1 -1
+0.00000
+>>>>>>> Stashed changes
