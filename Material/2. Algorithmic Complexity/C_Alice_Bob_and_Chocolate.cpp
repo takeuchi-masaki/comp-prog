@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
 
 int main(){
@@ -24,7 +25,13 @@ int main(){
     //     cout << right[i] << ' ';
     // }
     // cout << endl;
+    int ans1 = 0, ans2 = 0;
     for(int i = 0; i < n; i++){
-        
+        if(left[ans1]<=right[ans2]){
+            ans1++;
+        } else {
+            ans2++;
+        }
     }
+    cout << ans1 << ' ' << ans2 << endl;
 }
