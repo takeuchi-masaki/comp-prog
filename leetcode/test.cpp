@@ -1,12 +1,13 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 int convert16bitbinary(string input){
-    if(input.length() != 16) return -1;
+    if(input.length() > 16) return -1;
     int ans = 0;
-    for(int i = 15; i >= 0; i--){
+    for(int i = input.size()-1; i >= 0; i--){
         if(input[i]=='1'){
-            // bitwise leftshift, not stringstream operator
+            // bitwise leftshift
             ans += 1<<(15-i);
         }
     }
@@ -14,10 +15,10 @@ int convert16bitbinary(string input){
 }
 
 long long convert32bithex(string input){
-    if(input.size() != 8) return -1;
+    if(input.size() > 8) return -1;
     long long ans = 0;
     long long hex = 1;
-    for(int i = 7; i >= 0; i--){
+    for(int i = input.size()-1; i >= 0; i--){
         int num;
         if(input[i]<'A'){
             num = input[i]-'0';
@@ -32,8 +33,18 @@ long long convert32bithex(string input){
 }
 
 int main(){
-    string binary16 = "1010001110100011";
-    string hex32    = "1B495FC0";
+    freopen("out.txt", "w", stdout);
+
+    /* max numbers */
+    string binary16 = "1111111111111111";
+    string hex32 = "FFFFFFFF";
+    cout << convert16bitbinary(binary16) << endl;
+    cout << convert32bithex(hex32) << endl << endl;
+    
+    /* random numbers */
+    binary16 = "1010001110100011";
+    hex32    = "1B495FC0";
+    
     cout << convert16bitbinary(binary16) << endl;
     cout << convert32bithex(hex32) << endl;
 }
