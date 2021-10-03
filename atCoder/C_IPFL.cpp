@@ -31,11 +31,12 @@ int main(){
             swap = !swap;
         }
     }
+    // cout << s << endl;
     if(swap){
         for(int i = 0; i < n; i++){
             char temp = s[i];
             s[i] = s[n+i];
-            s[n+i] = s[i];
+            s[n+i] = temp;
         }
     }
     cout << s << endl;
