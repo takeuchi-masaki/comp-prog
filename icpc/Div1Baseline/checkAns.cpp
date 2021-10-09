@@ -6,7 +6,7 @@ int main(){
 
     bool ok = true;
 
-    freopen("Escape.out", "r", stdin);
+    freopen("wormhole.out", "r", stdin);
     vector<string> s1;
     string s;
     while( cin >> s ){
