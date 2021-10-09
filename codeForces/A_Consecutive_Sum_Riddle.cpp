@@ -2,13 +2,9 @@
 using namespace std;
 
 void solve(){
-    int n; cin >> n;
-    vector<int> a(n);
-    for(int&i:a) cin >> i;
-    sort(a.begin(), a.end(), greater<int>());
-    // for(int i:a) cout << i << ' ';
-    // cout << endl;
-    
+    long long n; cin >> n;
+    cout << -(n-1) << ' ' << n << endl;
+
 }
 
 int main(){
