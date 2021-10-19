@@ -2,11 +2,10 @@
 using namespace std;
 
 bool isPrime(long long n){
-    bool prime = true;
-    for(long long i = 1; i <= n; i++){
-        if(n%i == 0) prime = false;
+    for(long long i = 2; i < n; i++){
+        if(n%i == 0) return false;
     }
-    return prime;
+    return true;
 }
 
 int main(){

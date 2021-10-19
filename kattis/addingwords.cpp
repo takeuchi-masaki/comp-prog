@@ -16,12 +16,12 @@ int main(){
         if(s == "def"){
             string name; int num;
             cin >> name >> num;
-            if( m.find(name) != m.end() ){
+            if( m.count(name) ){
                 m2.erase( m[name] );
                 m.erase(name);
             }
-                m.insert(make_pair(name, num));
-                m2.insert(make_pair(num, name));
+            m.insert(make_pair(name, num));
+            m2.insert(make_pair(num, name));
         } else {
             getline(cin, s);
             s = s.substr(1);
@@ -30,7 +30,7 @@ int main(){
             string start;
             ss >> start;
             int curr;
-            if(m.find(start) == m.end()){
+            if( !m.count(start) ){
                 unknown = true;
             }
             else curr = m[start];
@@ -42,7 +42,7 @@ int main(){
                     break;
                 }
                 ss >> name;
-                if(m.find(name) == m.end()) {
+                if(!m.count(name)) {
                     unknown = true;
                     break;
                 }
@@ -54,7 +54,7 @@ int main(){
                 // cout << curr << endl;
             }
             cout << s << " ";
-            if( !unknown && m2.find(curr) != m2.end() ) cout << m2[curr] << "\n";
+            if( !unknown && m2.count(curr) ) cout << m2[curr] << "\n";
             else cout << "unknown\n";
         }
     }

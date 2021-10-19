@@ -6,7 +6,7 @@ void solve(){
     cin >> r >> e >> c;
     if(e - r == c){
         cout << "does not matter\n";
-    } else if(e-r > c){
+    } else if(e - r > c){
         cout << "advertise\n";
     } else {
         cout << "do not advertise\n";
