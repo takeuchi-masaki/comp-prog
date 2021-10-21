@@ -12,13 +12,13 @@ int main(){
     ios::sync_with_stdio(false); cin.tie(nullptr);
     cin >> n >> l >> p;
     vector<int> passengers(n, 0);
-    int longest = 0;
+    int farthest = 0;
     for(int i = 0; i < p; i++){
         int location; cin >> location;
         int car = min(location / l, n-1);
         passengers[car]++;
-        longest = max(longest, distToCar(location, car));
+        farthest = max(farthest, distToCar(location, car));
     }
     int maxPassengers = *max_element(passengers.begin(), passengers.end());
-    cout << longest << '\n' << maxPassengers << '\n';
+    cout << farthest << '\n' << maxPassengers << '\n';
 }

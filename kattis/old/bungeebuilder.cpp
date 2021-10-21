@@ -5,25 +5,21 @@ int main(){
     // freopen("input.txt","r",stdin); freopen("out.txt","w",stdout);
     ios::sync_with_stdio(false); cin.tie(nullptr);
     int n; cin >> n;
-    vector<int> h(n), left(n, -1), right(n, -1);
-    for(int& i:h) cin >> i;
-    for(int i = 1; i < n-1; i++){
-        left[i] = max(left[i-1], h[i-1]);
+    vector<int> h(n), l(n), r(n);
+    for(int&i:h) cin >> i;
+    for(int i = 1; i<n-1; i++){
+        l[i] = max(l[i-1], h[i-1]);
     }
-    for(int i = n-2; i > 0; i--){
-        right[i] = max(right[i+1], h[i+1]);
+    for(int i = n-2; i>0; i--){
+        r[i] = max(r[i+1], h[i+1]);
     }
-    // for(int i:left) {
-    //     cout << i << ' ';
-    // }
+    // for(int i:l) cout << i << ' ';
     // cout << endl;
-    // for(int i:right) {
-    //     cout << i << ' ';
-    // }
+    // for(int i:r) cout << i << ' ';
     // cout << endl;
-    int res = 0;
-    for(int i = 1; i < n-1; i++){
-        res = max(res, min(left[i], right[i])-h[i]);
+    int ans = 0;
+    for(int i = 0; i < n; i++){
+        ans = max(ans, min(l[i],r[i]) - h[i] );
     }
-    cout << res << endl;
+    cout << ans << endl;
 }

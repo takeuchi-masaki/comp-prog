@@ -4,56 +4,58 @@ using namespace std;
 int main(){
     // freopen("input.txt","r",stdin); freopen("out.txt","w",stdout);
     ios::sync_with_stdio(false); cin.tie(nullptr);
-    unordered_map<string, int> def_string;
-    unordered_map<int, string> def_num;
-    string line;
-    while(getline(cin, line)){
-        stringstream ss(line);
-        string func;
-        ss >> func;
-        if(func[0] == 'd'){
-            string str;
-            int num;
-            ss >> str >> num;
-            def_string[str] = num;
-            def_num[num] = str;
-        } else if(func[1] == 'l'){
-            def_string.clear();
-            def_num.clear();
+    string s;
+    map<string, int> m;
+    map<int, string> m2;
+    while( cin >> s ){
+        if(s == "clear"){
+            m.clear();
+            m2.clear();
+            continue;
+        } 
+        if(s == "def"){
+            string name; int num;
+            cin >> name >> num;
+            if( m.count(name) ){
+                m2.erase( m[name] );
+                m.erase(name);
+            }
+            m.insert(make_pair(name, num));
+            m2.insert(make_pair(num, name));
         } else {
-            cout << line.substr(5) << ' ';
-            string input;
-            ss >> input;
-            bool unknown = !def_string.count(input);
+            getline(cin, s);
+            s = s.substr(1);
+            istringstream ss(s);
+            bool unknown = false;
+            string start;
+            ss >> start;
             int curr;
-            if(!unknown) curr = def_string[input];
-            bool add = true;
-            while(!unknown){
-                ss >> input;
-                if(input == "=") break;
-                if(input == "+") { 
-                    add = true; 
-                    continue;
-                } else if(input == "-") {
-                    add = false;
-                    continue;
+            if( !m.count(start) ){
+                unknown = true;
+            }
+            else curr = m[start];
+            // cout << curr << endl;
+            while( !unknown ){
+                string op, name;
+                ss >> op;
+                if(op == "="){
+                    break;
                 }
-                if(!def_string.count(input)){
+                ss >> name;
+                if(!m.count(name)) {
                     unknown = true;
-                } else {
-                    if(add) {
-                        curr+=def_string[input];
-                    } else {
-                        curr-=def_string[input];
-                    }
+                    break;
                 }
+                if(op == "+"){
+                    curr += m[name];
+                } else {
+                    curr -= m[name];
+                }
+                // cout << curr << endl;
             }
-            if(unknown || !def_num.count(curr)) {
-                cout << "unknown\n";
-            } else {
-                cout << def_num[curr] << '\n';
-            }
+            cout << s << " ";
+            if( !unknown && m2.count(curr) ) cout << m2[curr] << "\n";
+            else cout << "unknown\n";
         }
     }
-    return 0;
 }
