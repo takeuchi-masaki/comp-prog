@@ -6,18 +6,9 @@ int main(){
     ios::sync_with_stdio(false); cin.tie(nullptr);
     int start, end; cin >> start >> end;
     
-    // clockwise
-    int s = start, e = end;
-    if(s > e){
-        e+=360;
-    }
-    int clockwise = e-s;
-
-    // counter-clockwise
-    if(end > start){
-        start+=360;
-    }
-    int counterclockwise = end-start;
+    int clockwise = end-start;
+    if(clockwise < 0) clockwise+=360;
+    int counterclockwise = clockwise-360;
 
     if(clockwise <= abs(counterclockwise)){
         cout << clockwise << endl;
