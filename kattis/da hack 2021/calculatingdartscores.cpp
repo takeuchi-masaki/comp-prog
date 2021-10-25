@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void printType(int multiplier){
+void printMultiplier(int multiplier){
     switch(multiplier){
         case 1: cout << "single "; break;
         case 2: cout << "double "; break;
@@ -22,15 +22,15 @@ int main(){
                         for(int k = 0; k <= 20; k++){
                             if(mult1*i + mult2*j + mult3*k == target){
                                 if(i){
-                                    printType(mult1);
+                                    printMultiplier(mult1);
                                     cout << i << '\n';
                                 }
                                 if(j){
-                                    printType(mult2);
+                                    printMultiplier(mult2);
                                     cout << j << '\n';
                                 }
                                 if(k){
-                                    printType(mult3);
+                                    printMultiplier(mult3);
                                     cout << k << '\n';
                                 }
                                 return 0;

@@ -18,13 +18,13 @@ void solve(){
         sumE += i;
     }
     long double avgCS = (long double)sumCS / cs,
-           avgE = (long double)sumE / e;
+        avgE = (long double)sumE / e;
     long long ans = 0;
     for(int i = 0; i < cs; i++){
         long long newSumCS = sumCS - cs_students[i],
             newSumE = sumE + cs_students[i];
         long double newAvgCS = (long double)newSumCS / (cs-1),
-               newAvgE = (long double)newSumE / (e+1);
+            newAvgE = (long double)newSumE / (e+1);
         if(newAvgCS > avgCS && newAvgE > avgE) ans++;
     }
     cout << ans << endl;

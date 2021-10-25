@@ -1,10 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-/**
- * @n - number
- * @return - largest factor 'i' such that i <= n/i
-*/
 int findLargestFactor(int n){
     int ans = 1;
     for(int i = 2; i < n; i++){
