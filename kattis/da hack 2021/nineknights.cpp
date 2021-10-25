@@ -16,8 +16,10 @@ bool checkKnightPos(int r, int c){
         {r+2, c-1}
     };
     for(pair<int,int> p:jump){
-        if(p.first < 0 || p.second < 0
-        || p.first >= ROW || p.second >= COL) continue;
+        if(p.first < 0 
+        || p.second < 0
+        || p.first >= ROW 
+        || p.second >= COL) continue;
         if(grid[p.first][p.second] == 'k') return true;
     }
     return false;
