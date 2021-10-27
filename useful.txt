@@ -27,6 +27,22 @@ for(int i = 2; i*i <= n; i++){
 	}
 }
 
+// euclidean GCD
+int gcd(int a, int b){
+	if(b == 0) return a;
+	return gcd(b, a%b);
+}
+
+int gcd(int a, int b){
+	int R;
+	while( (a % b) > 0 ){
+		R = a % b;
+		a = b;
+		b = R;
+	}
+	return b;
+}
+
 // factmod
 const int mod = 1e9;
 int factmod(int n) {
