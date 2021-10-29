@@ -2,12 +2,17 @@
 using namespace std;
 
 void solve(){
-    int n, k; cin >> n >> k;
-    int curr = 1, time = 0, add = 1;
+    long long n, k; cin >> n >> k;
+    long long curr = 1, time = 0, add = 1;
     while(curr < n){
+        if(add == k){
+            time += (n-curr+k-1)/k;
+            curr = n;
+            continue;
+        }
         curr += add;
-        add = min(k, add*2);
         time++;
+        add = min(k, add*2);
     }
     cout << time << '\n';
 }
