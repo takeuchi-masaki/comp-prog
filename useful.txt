@@ -134,29 +134,20 @@ T modpow(T base, T exp) {
 }
 
 // HASH
-struct HASH {
-    static uint64_t splitmixx64(uint64_t xx) {
-        xx += 0xx9e3779b97f4a7c15;
-        xx = (xx ^ (xx >> 30)) * 0xxbf58476d1ce4e5b9;
-        xx = (xx ^ (xx >> 27)) * 0xx94d049bb133111eb;
-        return xx ^ (xx >> 31);
-    }
-    size_t operator()(uint64_t xx) const {
+struct custom_hash {
+    size_t operator()(uint64_t x) const {
         static const uint64_t FIXED_RANDOM = chrono::steady_clock::now().time_since_epoch().count();
-        return splitmixx64(xx + FIXED_RANDOM);
+        x ^= FIXED_RANDOM;
+        return x ^ (x >> 16);
     }
 };
 
-// pair hash 
-// TO-DO: fix
-struct pair_hash
-{
+// pair hash
+struct pair_hash {
     template <class T1, class T2>
-    std::size_t operator () (std::pair<T1, T2> const &pair) const
-    {
+    std::size_t operator () (std::pair<T1, T2> const &pair) const {
         std::size_t h1 = std::hash<T1>()(pair.first);
         std::size_t h2 = std::hash<T2>()(pair.second);
- 
         return h1 ^ h2;
     }
 };
