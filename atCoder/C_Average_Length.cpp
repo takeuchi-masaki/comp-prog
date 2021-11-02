@@ -1,30 +1,44 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+int n;
+long double total = 0;
+int iterations = 0;
+vector<int> x, y;
+
+void dfs(vector<int> & path, vector<bool> & used){
+    if(path.size() != n){
+        for(int i = 0; i < n; i++){
+            if(used[i]) continue;
+            used[i] = true;
+            path.push_back(i);
+            dfs(path, used);
+            used[i] = false;
+            path.pop_back();
+        }
+        return;
+    }
+    int currX = x[path[0]], currY = y[path[0]];
+    for(int idx = 1; idx < n; idx++){
+        int nextX = x[path[idx]], nextY = y[path[idx]];
+        long double currDist = sqrtl( (currX-nextX)*(currX-nextX) + (currY-nextY)*(currY-nextY) );
+        total += currDist;
+        currX = nextX, currY = nextY;
+    }
+    iterations++;
+}
+
 int main(){
-    // freopen("input.txt","r",stdin); freopen("out.txt","w",stdout);
     ios::sync_with_stdio(false); cin.tie(nullptr);
-    int n; cin >> n;
-    vector<int> x(n), y(n);
+    cin >> n;
+    x = y = vector<int>(n);
     for(int i = 0; i < n; i++){
         cin >> x[i] >> y[i];
     }
-    vector<int> path(n);
-    iota(path.begin(), path.end(), 0);
-    long double total = 0;
-    int iterations = 0;
-    do{
-        iterations++;
-        long double currTotal = 0;
-        for(int next = 1; next < n; next++){
-            long double diffX = x[path[next-1]] - x[path[next]],
-            diffY = y[path[next-1]] - y[path[next]];
-            diffX*=diffX, diffY*=diffY;
-            diffX+=diffY;
-            currTotal += sqrtl(diffX);
-        }
-        total += currTotal;
-    } while(next_permutation(path.begin(), path.end()));
+    vector<int> path;
+    vector<bool> used(n, false);
+    dfs(path, used);
+
     total /= iterations;
     cout << fixed << setprecision(10) << total << endl;
 }

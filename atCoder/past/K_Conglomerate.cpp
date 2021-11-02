@@ -1,19 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-/*
-    1 -> 2 -> 3 -> 4 -> 5 -> 6
-    
-*/
 
-void dfs(int currMember, vector<int> & higher, vector<vector<int>> & subordinates, vector<vector<bool>> & junior){
+
+void dfs(int currMember, vector<vector<int>> & subordinates, vector<int> & euler_tour){
+    euler_tour.push_back(currMember);
     for(int direct_junior : subordinates[currMember]){
-        for(int high : higher){
-            junior[direct_junior][high] = true;
-        }
-        higher.push_back(direct_junior);
-        dfs(direct_junior, higher, subordinates, junior);
-        higher.pop_back();
+        dfs(direct_junior, subordinates, euler_tour);
+        euler_tour.push_back(currMember);
     }
 }
 
@@ -32,26 +26,24 @@ int main(){
         }
         subordinates[boss-1].push_back(i);
     }
+    
+    vector<int> euler_tour;
+    dfs(bigBoss, subordinates, euler_tour);
 
-    // for(int i = 0; i < n; i++){
-    //     for(int sub:subordinates[i]){
-    //         cout << sub << ' ';
-    //     }
-    //     cout << '\n';
-    // }
+    /*
+        1 2 3 4 5 6 7
+          1 1 2 2 3 3
 
-    vector<vector<bool>> junior(n, vector<bool>(n, false));
-    vector<int> higher;
-    higher.push_back(bigBoss);
-    dfs(bigBoss, higher, subordinates, junior);
-
-    int q; cin >> q;
-    for(int i = 0; i < q; i++){
-        int a, b; cin >> a >> b;
-        if(junior[a-1][b-1]){
-            cout << "Yes\n";
-        } else {
-            cout << "No\n";
-        }
+            1
+        2       3
+    4     5   6   7        
+    */
+    for(int i : euler_tour){
+        cout << i+1 << ' ';
     }
+    // int q; cin >> q;
+    // for(int i = 0; i < q; i++){
+    //     int a, b; cin >> a >> b;
+        
+    // }
 }
