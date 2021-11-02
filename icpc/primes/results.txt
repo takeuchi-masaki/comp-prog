@@ -1,0 +1,10 @@
+results
+
+linear:
+5200 ms
+
+linear2:
+1400 ms
+
+root:
+9/100 ms

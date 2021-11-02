@@ -11,12 +11,11 @@ bool isPrime(long long n){
 }
 
 int main(){
-    freopen("input.txt","r",stdin); freopen("out.txt","w",stdout);
-    
+    freopen("out.txt","w",stdout);
+
     auto start = chrono::steady_clock::now();
 
     long long n = 1e9+7;
-    // cin >> n;
     cout << n << " is ";
     if( !isPrime(n) ) cout << "not ";
     cout << "prime\n";

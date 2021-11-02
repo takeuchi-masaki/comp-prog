@@ -12,7 +12,7 @@ bool isPrime(long long n){
 }
 
 int main(){
-    freopen("input.txt","r",stdin); freopen("out.txt","w",stdout);
+    freopen("out.txt","w",stdout);
     
     auto start = chrono::steady_clock::now();
 
@@ -22,7 +22,7 @@ int main(){
         if( !isPrime(n) ) cout << "not ";
         cout << "prime\n";
     }
-    
+
     auto end = chrono::steady_clock::now();
 
     cout << "runtime: " << chrono::duration_cast<chrono::milliseconds>(end-start).count() << "ms\n";
