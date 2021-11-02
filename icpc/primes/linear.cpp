@@ -12,7 +12,7 @@ bool isPrime(long long n){
 
 int main(){
     freopen("input.txt","r",stdin); freopen("out.txt","w",stdout);
-    ios::sync_with_stdio(false); cin.tie(nullptr);
+    
     auto start = chrono::steady_clock::now();
 
     long long n = 1e9+7;
