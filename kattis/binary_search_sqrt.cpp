@@ -2,13 +2,13 @@
 using namespace std;
 
 double bin_sqrt(int num, double precision){
-    double left = 0, right = num;
-    while(right - left > precision){
-        double mid = left + (right-left)/2;
-        if(mid*mid >= num) right = mid;
-        else left = mid;
+    double bad = 0, ok = num;
+    while(abs(ok - bad) > precision){
+        double mid = (bad + ok) / 2;
+        if(mid * mid >= num) ok = mid;
+        else bad = mid;
     }
-    return right;
+    return ok;
 }
 
 int main(){
