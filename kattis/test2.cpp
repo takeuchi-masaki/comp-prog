@@ -27,7 +27,7 @@ int upper(int key) {
 
 int main(){
     ios::sync_with_stdio(false); cin.tie(nullptr);
-    cout << lower(51) << ' ' << upper(51) << '\n';
+    cout << lower(910) << ' ' << upper(910) << '\n';
     cout << lower_bound(arr.begin(), arr.end(), 51) - arr.begin() << ' ';
     cout << upper_bound(arr.begin(), arr.end(), 51) - arr.begin() << '\n';
 }
