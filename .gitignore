@@ -9,3 +9,7 @@ atCoder/.vs/atCoder/v16/.suo
 usaco_training/test.dSYM/Contents/Info.plist
 usaco_training/test.dSYM/Contents/Resources/DWARF/test
 *.bin
+cses/test_input.txt
+cses/test_output.txt
+cses/out.txt
+cses/user_output.txt

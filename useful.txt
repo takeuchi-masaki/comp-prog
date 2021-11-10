@@ -83,35 +83,6 @@ int nCr(int n, int r){
 	return ans;
 }
 
-// mod int mint
-const int mod = 1000000007;
-struct mint {
-  unsigned int xx;
-  mint(): xx(0) {}
-  mint(long long xx):xx((xx%mod+mod)%mod) {}
-  mint operator-() const { return mint(0) - *this; }
-  mint operator~() const { return mint(1) / *this; }
-  mint& operator+=(const mint& a) { if((xx+=a.xx)>=mod) xx-=mod; return *this; }
-  mint& operator-=(const mint& a) { if((xx+=mod-a.xx)>=mod) xx-=mod; return *this; }
-  mint& operator*=(const mint& a) { xx=(unsigned long long)xx*a.xx%mod; return *this; }
-  mint& operator/=(const mint& a) { xx=(unsigned long long)xx*a.pow(mod-2).xx%mod; return *this; }
-  mint operator+(const mint& a) const { return mint(*this) += a; }
-  mint operator-(const mint& a) const { return mint(*this) -= a; }
-  mint operator*(const mint& a) const { return mint(*this) *= a; }
-  mint operator/(const mint& a) const { return mint(*this) /= a; }
-  mint pow(long long t) const {
-    if(!t) return 1;
-    mint res = pow(t/2);
-    res *= res;
-    return (t&1)?res*xx:res;
-  }
-  bool operator<(const mint& a) const { return xx < a.xx; }
-  bool operator==(const mint& a) const { return xx == a.xx; }
-  bool operator!=(const mint& a) const { return xx != a.xx; }
-};
-istream& operator>>(istream& i, mint& a) { i>>a.xx; return i; }
-ostream& operator<<(ostream& o, const mint& a) { o<<a.xx; return o; }
-
 // mod add
 void add(int& a, int b){
     a+=b;
@@ -120,11 +91,10 @@ void add(int& a, int b){
     }
 }
 
-// pow mod
-template <typename T>
-T modpow(T base, T exp) {
+// pow mod karatsuba
+long long modpow(long long base, long long exp) {
 	base %= MOD;
-	T result = 1;
+	long long result = 1;
 	while (exp > 0) {
 		if (exp & 1) result = (result * base) % MOD;
 		base = (base * base) % MOD;
