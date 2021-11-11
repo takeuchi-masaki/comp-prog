@@ -1,14 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void find7777Sum(vector<int> & a){
+void twoSum(int target, vector<int> & a){
     set<int> s;
     for(int i:a){
-        if(s.count(7777-i)){
+        if(s.count(target - i)){
             cout << "Yes\n";
             return;
         }
-        s.emplace(i);
+        s.insert(i);
     }
     cout << "No\n";
 }
@@ -25,21 +25,16 @@ void findDuplicate(vector<int> & a){
     cout << "Unique\n";
 }
 
-void findMode(vector<int> & a){
+void findMode(int necQuantity, vector<int> & a){
     map<int,int> m;
     for(int i:a) m[i]++;
-    int mode = 0, currNum;
+    int mode = -1;
     for(pair<int,int> p:m){
-        if(p.second > mode){
-            currNum = p.first;
-            mode = p.second;
+        if(p.second > necQuantity){
+            mode = p.first;
         }
     }
-    if(mode > a.size() / 2){
-        cout << currNum << '\n';
-        return;
-    }
-    cout << "-1\n";
+    cout << mode << '\n';
 }
 
 void findMedian(vector<int> & a){
@@ -51,11 +46,11 @@ void findMedian(vector<int> & a){
     }
 }
 
-void printRange(vector<int> & a){
+void printRange(int minVal, int maxVal, vector<int> & a){
     sort(a.begin(), a.end());
-    int start = lower_bound(a.begin(), a.end(), 100) - a.begin();
+    int start = lower_bound(a.begin(), a.end(), minVal) - a.begin();
     for(int i = start; i < a.size(); i++){
-        if(a[i] > 999) break;
+        if(a[i] > maxVal) break;
         cout << a[i] << ' ';
     }
     cout << '\n';
@@ -68,19 +63,19 @@ int main(){
     for(int & i : a) cin >> i;
     switch(t){
         case 1:
-            find7777Sum(a);
+            twoSum(7777, a);
             break;
         case 2: 
             findDuplicate(a);
             break;
         case 3: 
-            findMode(a);
+            findMode(n/2, a);
             break;
         case 4: 
             findMedian(a);
             break;
         case 5: 
-            printRange(a);
+            printRange(100, 999, a);
             break;
     }
 }
