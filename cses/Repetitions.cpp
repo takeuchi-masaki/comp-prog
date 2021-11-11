@@ -2,17 +2,13 @@
 using namespace std;
 
 int main(){
-    // freopen("input.txt","r",stdin); freopen("out.txt","w",stdout);
     ios::sync_with_stdio(false); cin.tie(nullptr);
     string s; cin >> s;
-    int maxRep = 1;
-    for(int i = 0; i < s.size()-1; i++){
-        int currRep = 1;
-        while(i < s.size()-1 && s[i] == s[i+1]){
-            i++;
-            currRep++;
-        }
-        maxRep = max(maxRep, currRep);
+    int ans = 1, rep = 1;
+    for(int i = 1; i < s.size(); i++){
+        if(s[i] == s[i-1]) rep++;
+        else rep = 1;
+        ans = max(ans, rep);
     }
-    cout << maxRep << endl;
+    cout << ans << '\n';
 }
