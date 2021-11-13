@@ -66,29 +66,35 @@
 		"description": "use file input output"
 	},
 
-	"boolttemplate": {
-		"prefix": "ttbool",
+	"ll": {
+		"prefix": "long long",
+		"body": "long long",
+		"description": "auto-complete long long"
+	},
+
+	"vector vector int": {
+		"prefix": "vvi",
+		"body": "vector<vector<int>> $1($2, vector<int>($3));",
+		"description": "vector vector int"
+	},
+
+	"vector vector long long": {
+		"prefix": "vvll",
+		"body": "vector<vector<long long>> $1($2, vector<long long>($3));",
+		"description": "vector vector long long"
+	},
+
+	"custom hash": {
+		"prefix": "custom hash",
 		"body": [
-		  "#include <bits/stdc++.h>",
-		  "using namespace std;",
-		  "",
-		  "bool solve(){",
-		  "    $0",
-		  "}",
-		  "",
-		  "int main(){",
-		  "    ios::sync_with_stdio(false); cin.tie(nullptr);",
-		  "    int T = 1;",
-		  "    cin >> T;",
-		  "    for(int i = 1; i <= T; i++) {",
-		  "        if(solve()){",
-		  "            cout << \"YES\\n\";",
-		  "        } else {",
-		  "            cout << \"NO\\n\";",
-		  "        }",
+		  "struct custom_hash {",
+		  "    size_t operator()(uint64_t x) const {",
+		  "        static const uint64_t FIXED_RANDOM = chrono::steady_clock::now().time_since_epoch().count();",
+		  "        x ^= FIXED_RANDOM;",
+		  "        return x ^ (x >> 16);",
 		  "    }",
-		  "}"
+		  "};"
 		],
-		"description": ""
+		"description": "custom hash"
 	  }
 }
