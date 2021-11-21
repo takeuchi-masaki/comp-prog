@@ -8,9 +8,11 @@ int main(){
     int currIndex = 0;
     for(int i = 1; i <= n; i++){
         string curr = to_string(i);
-        if(s.substr(currIndex, curr.size()) != curr){
-            cout << curr << '\n';
-            return 0;
+        for(int j = currIndex; j < currIndex + curr.size(); j++){
+            if(s[j] != curr[j - currIndex]){
+                cout << i << '\n';
+                return 0;
+            }
         }
         currIndex += curr.size();
     }
