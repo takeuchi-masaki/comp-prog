@@ -7,6 +7,7 @@ int main(){
     vector<int> a(n);
     for(int & i : a) cin >> i;
     sort(a.begin(), a.end());
+    
     double ans = 1;
     for(int i = 0; i < n; i++){
         if(a[i] > i + 1) {

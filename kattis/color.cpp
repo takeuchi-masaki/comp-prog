@@ -7,6 +7,7 @@ int main(){
     vector<int> color(n);
     for(int & i : color) cin >> i;
     sort(color.begin(), color.end());
+    
     int upperLimit = color[0] + k, currCapacity = 1, ans = 1;
     for(int i = 1; i < n; i++){
         if(currCapacity == c || color[i] > upperLimit){
