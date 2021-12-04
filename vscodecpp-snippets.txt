@@ -61,7 +61,7 @@
 	"freopen": {
 		"prefix": "openfile",
 		"body": [
-			"freopen(\"input.txt\",\"r\",stdin); freopen(\"out.txt\",\"w\",stdout);"
+			"freopen(\"in.txt\",\"r\",stdin); freopen(\"out.txt\",\"w\",stdout);"
 		],
 		"description": "use file input output"
 	},
