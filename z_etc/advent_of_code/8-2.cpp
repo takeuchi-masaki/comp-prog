@@ -18,14 +18,12 @@ int main(){
     ios::sync_with_stdio(false); cin.tie(nullptr);
     freopen("in.txt","r",stdin); freopen("out.txt","w",stdout);
 
-    vector<int> bin_segments(10);
     unordered_map<int,int> m;
     for(int i = 0; i < 10; i++){
         int sum = 0;
         for(int seg : segments[i]){
             sum += 1<<seg;
         }
-        bin_segments[i] = sum;
         m[sum] = i;
     }
 

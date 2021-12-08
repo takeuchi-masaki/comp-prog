@@ -13,7 +13,7 @@ int main(){
         for(string & s : code) cin >> s;
         
         for(string s : code){
-            if( (s.size() <= 4 && s.size() >= 2 )
+            if( (s.size() <= 4 && s.size() >= 2)
                 || s.size() == 7) ans++;
         }
     }
