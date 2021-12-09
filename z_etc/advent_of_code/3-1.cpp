@@ -5,12 +5,9 @@ int main(){
     ios::sync_with_stdio(false); cin.tie(nullptr);
     freopen("in.txt","r",stdin); freopen("out.txt","w",stdout);
     vector<string> reports;
-    
-    {
-        string s;
-        while(cin >> s){
-            reports.push_back(s);
-        }
+    string s;
+    while(cin >> s){
+        reports.push_back(s);
     }
 
     string gamma = "";

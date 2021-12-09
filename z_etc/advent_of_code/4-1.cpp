@@ -35,19 +35,17 @@ int main(){
     freopen("in.txt","r",stdin); freopen("out.txt","w",stdout);
     
     vector<int> bingoNums;
-    {
-        string values; 
-        getline(cin, values);
-        int currStart = 0;
-        for(int i = 0; i < values.size(); i++){
-            if(values[i] != ',') continue;
-            string nextVal = values.substr(currStart, i - currStart);
-            currStart = i + 1;
-            bingoNums.push_back(stoi(nextVal));
-        }
-        string nextVal = values.substr(currStart);
+    string values; 
+    getline(cin, values);
+    int currStart = 0;
+    for(int i = 0; i < values.size(); i++){
+        if(values[i] != ',') continue;
+        string nextVal = values.substr(currStart, i - currStart);
+        currStart = i + 1;
         bingoNums.push_back(stoi(nextVal));
     }
+    string nextVal = values.substr(currStart);
+    bingoNums.push_back(stoi(nextVal));
 
     int fastestWin = 1e9, score;
     vector<vector<int>> board(5, vector<int>(5));
