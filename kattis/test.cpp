@@ -1,18 +1,23 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int binary_search(int key, vector<int> & a) {
-    int left = 0, right = (int)a.size() - 1; // 配列 a の左端と右端
-    while (right >= left) {
-        int mid = left + (right - left) / 2; // 区間の真ん中
-        if (a[mid] == key) return mid;
-        else if (a[mid] > key) right = mid - 1;
-        else if (a[mid] < key) left = mid + 1;
+struct Node{
+    int index, weight;
+    bool operator< (const Node& n2) const {
+        if(this->weight == n2.weight) return this->index < n2.index;
+        return this->weight < n2.weight;
     }
-    return -1;
-}
+};
 
 int main(){
     ios::sync_with_stdio(false); cin.tie(nullptr);
-    
+    set<Node> s;
+    for(int i = 0; i < 5; i++){
+        for(int j = 0; j < 5; j++){
+            s.insert({i, j});
+        }
+    }
+    for(Node n : s){
+        cout << n.index << ' ' << n.weight << '\n';
+    }
 }
