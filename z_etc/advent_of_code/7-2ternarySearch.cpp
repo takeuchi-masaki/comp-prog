@@ -19,8 +19,8 @@ int main(){
     sort(crabs.begin(), crabs.end());
     int n = crabs.size();
     
-    int a = crabs[0], b = crabs[n - 1] + 1;
-    while(b - a > 1){
+    int a = crabs[0], b = crabs[n - 1];
+    while(b - a > 3){
         long long c = (2*a + b) / 3;
         long long d = (a + 2*b) / 3;
         long long sumC = 0, sumD = 0;
@@ -37,10 +37,15 @@ int main(){
         }
     }
 
-    long long sumA = 0;
-    for(int pos : crabs){
-        long long diffA = abs(a - pos);
-        sumA += diffA * (diffA + 1) / 2;
+    long long ans = 1e18;
+    for(int i = a; i <= b; i++){
+        long long curr = 0;
+        for(int pos : crabs){
+            long long diff = abs(i - pos);
+            curr += diff * (diff + 1) / 2;
+        }
+        ans = min(ans, curr);
     }
-    cout << sumA << '\n';
+    
+    cout << ans << '\n';
 }
