@@ -2,19 +2,24 @@
 using namespace std;
 
 int xMin, yMin, xMax, yMax;
+set<int> validX, validY;
 
-bool simulateXY(int currX, int currY, int velX, int velY){
-    if(currX >= xMin && currX <= xMax
-    && currY >= yMin && currY <= yMax) return true;
-    if(currX > xMax || currY < yMin) return false;
-    return simulateXY(currX + velX, currY + velY, max(velX - 1, 0), velY - 1);
+void simulateX(int velX, int currX, int time){
+    if(currX >= xMin && currX <= xMax) validX.insert(time);
+    if(currX > xMax || velX == 0) return;
+    simulateX(velX - 1, currX + velX, time + 1);
 }
 
-bool simulateX(int currX, int velX){
-    if(currX >= xMin && currX <= xMax) return true;
-    if(currX > xMax) return false;
-    if(currX < xMin && velX == 0) return false;
-    return simulateX(currX + velX, velX - 1);
+void simulateY(int velY, int currY, int time){
+    if(currY >= yMin && currY <= yMax) {
+        if((time >= *validX.rbegin()) || validX.count(time)){
+            int startY = velY + time;
+            int maxY = startY * (startY + 1) / 2;
+            validY.insert(maxY);
+        }
+    }
+    if(currY + velY < yMin) return;
+    simulateY(velY - 1, currY + velY, time + 1);
 }
 
 int main(){
@@ -46,29 +51,15 @@ int main(){
         string y2_str = line.substr(y2Begin, y2End - y2Begin);
         yMax = stoi(y2_str);
         
-        // cout << xMin << ' ' << xMax << ' ' << yMin << ' ' << yMax << '\n';
+        cout << xMin << ' ' << xMax << ' ' << yMin << ' ' << yMax << '\n';
     }
-
-    // find velocity <x, y> such that
-    // y is maximized and target area is reached
     
-    // find min valid x, max valid x
-    int validXMin, validXMax = xMax;
-    {
-        int l = 0, r = xMax;
-        while(r - l > 1){
-            int mid = (l + r)/2;
-            if(simulateX(0, mid)){
-                r = mid;
-            } else {
-                l = mid;
-            }
-        }
-        validXMin = r;
+    for(int x = 0; x <= xMax; x++){
+        simulateX(x, 0, 0);
     }
-    // cout << validXMin << ' ' << validXMax << '\n';
 
-    for(int x = validXMin; x <= validXMax; x++){
-        
+    for(int y = 200; y >= 0; y--){
+        simulateY(y, 0, 0);
     }
+    cout << *validY.rbegin() << '\n';
 }
