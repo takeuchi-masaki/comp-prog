@@ -34,6 +34,7 @@ vector<pair<int,int>> inputLine(){
 
 vector<pair<int,int>> reduce(vector<pair<int,int>>& v){
     printvp(v);
+    
     vector<pair<int,int>> ret;
     for(int i = 0; i < v.size(); i++){
         auto& [val, depth] = v[i];
@@ -63,21 +64,38 @@ vector<pair<int,int>> reduce(vector<pair<int,int>>& v){
 
 vector<pair<int,int>> combine(vector<pair<int,int>>& v1, vector<pair<int,int>>& v2){
     vector<pair<int,int>> ret;
+    bool needReduce = false;
     for(auto& [val, depth] : v1){
         ret.push_back(make_pair(val, depth + 1));
+        if(val > 9 || depth + 1 > 4) needReduce = true;
     }
     for(auto& [val, depth] : v2){
         ret.push_back(make_pair(val, depth + 1));
+        if(val > 9 || depth + 1 > 4) needReduce = true;
     }
-    return reduce(ret);
+    
+    if(needReduce) return reduce(ret);
+    return ret;
 }
 
 
-int magnitude(vector<pair<int,int>>& v){
-    int mag = 0;
-
-
-    return mag;
+int magnitude(vector<pair<int,int>> prev){
+    while(prev.size() > 2){
+        vector<pair<int,int>> next;
+        for(int i = 0; i < prev.size(); i++){
+            if(i + 1 < prev.size() && prev[i].second == prev[i + 1].second){
+                int mag = prev[i].first * 3 + prev[i + 1].first * 2;
+                int depth = prev[i].second - 1;
+                next.push_back(make_pair(mag, depth));
+                i++;
+            } else {
+                next.push_back(prev[i]);
+            }
+        }
+        prev = move(next);
+    }
+    
+    return prev[0].first * 3 + prev[1].first * 2;
 }
 
 
@@ -88,5 +106,6 @@ int main(){
         vector<pair<int,int>> next{inputLine()};
         prev = combine(prev, next);
     }
-    // cout << magnitude(prev) << '\n';
+    printvp(prev);
+    cout << magnitude(prev) << '\n';
 }
