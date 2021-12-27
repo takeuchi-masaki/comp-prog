@@ -22,30 +22,31 @@ int main(){
         char xy = line[11];
         string foldNum_str = line.substr(13);
         int foldVal = stoi(foldNum_str);
-        pair<int,bool> nextFold;
-        nextFold.first = foldVal;
-        nextFold.second = (xy == 'x');
+        pair<int,bool> nextFold{
+            foldVal,
+            (xy == 'x')
+        };
         folds.push_back(nextFold);
     }
 
-    for(pair<int,bool> fold : folds){
+    for(auto& [val, isX] : folds){
         set<pair<int,int>> newSet;
-        for(auto p : s){
-            pair<int,int> newPair = p;
-            if(fold.second && p.first >= fold.first){
-                newPair.first = fold.first - (p.first - fold.first);
-            } else if(!fold.second && p.second >= fold.first){
-                newPair.second = fold.first - (p.second - fold.first);
+        for(auto& [x, y] : s){
+            pair<int,int> newPair = {x, y};
+            if(isX && x >= val){
+                newPair.first = val - (x - val);
+            } else if(!isX && y >= val){
+                newPair.second = val - (y - val);
             }
             newSet.insert(newPair);
         }
-        s.swap(newSet);
+        s = move(newSet);
     }
 
     int maxX = 0, maxY = 0;
-    for(auto p : s) {
-        maxX = max(maxX, p.first);
-        maxY = max(maxY, p.second);
+    for(auto& [x, y] : s) {
+        maxX = max(maxX, x);
+        maxY = max(maxY, y);
     }
     
     for(int y = 0; y <= maxY; y++){

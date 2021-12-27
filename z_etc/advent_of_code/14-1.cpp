@@ -29,7 +29,7 @@ int main(){
                 nextString[p] += cnt;
             }
         }
-        nextString.swap(prevString);
+        prevString = move(nextString);
     }
     
     map<char, long long> char_cnt;

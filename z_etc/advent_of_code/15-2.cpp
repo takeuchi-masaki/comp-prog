@@ -28,11 +28,11 @@ const vector< vector< pair<int,int> > > regionCoord = {
     {{1, 4}, {2, 3}, {3, 2}, {4, 1}},
     {{2, 4}, {3, 3}, {4, 2}},
     {{3, 4}, {4, 3}},
-    {{4,4}}
+    {{4, 4}}
 };
 
 void fillRegions(int region, vector<vector<int>>& nextCost, vector<vector<int>>& cost){
-    for(auto [multI, multJ] : regionCoord[region]){
+    for(auto& [multI, multJ] : regionCoord[region]){
         int startI = small_n * multI;
         int startJ = small_n * multJ;
         for(int i = startI; i < startI + small_n; i++){
@@ -77,7 +77,7 @@ int main(){
             }
         }
         fillRegions(region, nextCost, cost);
-        nextCost.swap(prevCost);
+        prevCost = move(nextCost);
     }
 
     // for(int i = 0; i < big_n; i++){
@@ -93,24 +93,24 @@ int main(){
     set<pair<int, pair<int,int>>> pq;
     pq.insert(make_pair(0, make_pair(0, 0)));
     while(!pq.empty()){
-        auto currCoord = pq.begin()->second;
+        auto& [i, j] = pq.begin()->second;
         pq.erase(pq.begin());
         vector<pair<int,int>> directions = {
-            {currCoord.first - 1, currCoord.second},
-            {currCoord.first + 1, currCoord.second},
-            {currCoord.first, currCoord.second - 1},
-            {currCoord.first, currCoord.second + 1}
+            {i - 1, j},
+            {i + 1, j},
+            {i, j - 1},
+            {i, j + 1}
         };
-        for(auto& [next_i, next_j] : directions){
+        for(auto& p : directions){
+            auto& [next_i, next_j] = p;
             if(next_i < 0
             || next_j < 0
             || next_i >= big_n
             || next_j >= big_n) continue;
-            if(travel_cost[currCoord.first][currCoord.second] + cost[next_i][next_j] >= travel_cost[next_i][next_j]) continue;
-            travel_cost[next_i][next_j] = travel_cost[currCoord.first][currCoord.second] + cost[next_i][next_j];
-            pq.insert(make_pair(travel_cost[next_i][next_j], make_pair(next_i, next_j)));
+            if(travel_cost[i][j] + cost[next_i][next_j] >= travel_cost[next_i][next_j]) continue;
+            travel_cost[next_i][next_j] = travel_cost[i][j] + cost[next_i][next_j];
+            pq.insert(make_pair(travel_cost[next_i][next_j], p));
         }
     }
-
     cout << travel_cost[big_n - 1][big_n - 1] << '\n';
 }

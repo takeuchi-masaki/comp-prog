@@ -24,7 +24,7 @@ int main(){
         for(int fish_timer = 1; fish_timer < 9; fish_timer++){
             nextFish[fish_timer - 1] += fish[fish_timer];
         }
-        fish.swap(nextFish);
+        fish = move(nextFish);
     }
 
     cout << accumulate(fish.begin(), fish.end(), 0ll) << '\n';

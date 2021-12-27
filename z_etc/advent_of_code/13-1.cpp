@@ -22,26 +22,24 @@ int main(){
         char xy = line[11];
         string foldNum_str = line.substr(13);
         int foldVal = stoi(foldNum_str);
-        pair<int,bool> nextFold;
-        nextFold.first = foldVal;
-        nextFold.second = (xy == 'x');
+        pair<int,bool> nextFold{
+            foldVal,
+            (xy == 'x')
+        };
         folds.push_back(nextFold);
     }
 
-    // for(pair<int,bool> fold : folds){
-        auto fold = folds.front();
-        set<pair<int,int>> newSet;
-        for(auto p : s){
-            pair<int,int> newPair = p;
-            if(fold.second && p.first >= fold.first){
-                newPair.first = fold.first - (p.first - fold.first);
-            } else if(!fold.second && p.second >= fold.first){
-                newPair.second = fold.first - (p.second - fold.first);
-            }
-            newSet.insert(newPair);
+    auto& [val, isX] = folds.front();
+    set<pair<int,int>> newSet;
+    for(auto& [x, y] : s){
+        pair<int,int> newPair = {x, y};
+        if(isX && x >= val){
+            newPair.first = val - (x - val);
+        } else if(!isX && y >= val){
+            newPair.second = val - (y - val);
         }
-        s.swap(newSet);
-    // }
+        newSet.insert(newPair);
+    }
 
-    cout << s.size();
+    cout << newSet.size();
 }
