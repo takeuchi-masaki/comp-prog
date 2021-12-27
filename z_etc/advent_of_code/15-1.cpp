@@ -22,22 +22,23 @@ int main(){
     set<pair<int, pair<int,int>>> pq; // currCost, coord
     pq.insert(make_pair(0, make_pair(0, 0)));
     while(!pq.empty()){
-        auto currCoord = pq.begin()->second;
+        auto& [i, j] = pq.begin()->second;
         pq.erase(pq.begin());
         vector<pair<int,int>> directions = {
-            {currCoord.first - 1, currCoord.second},
-            {currCoord.first + 1, currCoord.second},
-            {currCoord.first, currCoord.second - 1},
-            {currCoord.first, currCoord.second + 1}
+            {i - 1, j},
+            {i + 1, j},
+            {i, j - 1},
+            {i, j + 1}
         };
-        for(auto& [next_i, next_j] : directions){
+        for(auto& p : directions){
+            auto& [next_i, next_j] = p;
             if(next_i < 0
             || next_j < 0
             || next_i >= n
             || next_j >= n) continue;
-            if(travel_cost[currCoord.first][currCoord.second] + cost[next_i][next_j] >= travel_cost[next_i][next_j]) continue;
-            travel_cost[next_i][next_j] = travel_cost[currCoord.first][currCoord.second] + cost[next_i][next_j];
-            pq.insert(make_pair(travel_cost[next_i][next_j], make_pair(next_i, next_j)));
+            if(travel_cost[i][j] + cost[next_i][next_j] >= travel_cost[next_i][next_j]) continue;
+            travel_cost[next_i][next_j] = travel_cost[i][j] + cost[next_i][next_j];
+            pq.insert(make_pair(travel_cost[next_i][next_j], p));
         }
     }
 

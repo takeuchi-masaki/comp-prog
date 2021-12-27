@@ -19,7 +19,7 @@ string oxygenRating(vector<string> numbers){
                 if(s[digit] == '0') nextNumbers.push_back(s);
             }
         }
-        numbers.swap(nextNumbers);
+        numbers = move(nextNumbers);
         digit++;
     }
     return numbers[0];
@@ -43,7 +43,7 @@ string co2Rating(vector<string> numbers){
                 if(s[digit] == '1') nextNumbers.push_back(s);
             }
         }
-        numbers.swap(nextNumbers);
+        numbers = move(nextNumbers);
         digit++;
     }
     return numbers[0];
