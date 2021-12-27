@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<pair<int,int>> reduce(vector<pair<int,int>>& v);
+vector<pair<int,int>> red(vector<pair<int,int>>);
 
 void printvp(vector<pair<int,int>>& vp){
     for(auto& [val, depth] : vp){
@@ -27,38 +27,53 @@ vector<pair<int,int>> inputLine(){
             } else if(line[i] == ']') depth--;
         }
     }
-    if(tooDeep) return reduce(ret);
+    if(tooDeep) return red(ret);
     return ret;
 }
 
 
-vector<pair<int,int>> reduce(vector<pair<int,int>>& v){
-    printvp(v);
+vector<pair<int,int>> red(vector<pair<int,int>> prev){
+    // printvp(prev);
     
-    vector<pair<int,int>> ret;
-    for(int i = 0; i < v.size(); i++){
-        auto& [val, depth] = v[i];
-        if(val > 9){
-            ret.push_back(make_pair((val / 2), depth + 1));
-            ret.push_back(make_pair((val + 1) / 2, depth + 1));
-        } else if(depth > 4){
-            pair<int,int> p{0, depth - 1};
-            if(i > 0) p.first = val + v[i - 1].first;
-            ret.back() = p;
-            // if(i + 1 < v.size()){
-            //     p = {0, depth - 1};
-            //     auto& [val2, depth2] = 
-            //     if(i + 2 < v.size()){
-            //         // p.first = 
-            //     }
-            // }
-        } else {
-            ret.push_back(v[i]);
+    vector<pair<int,int>> next;
+    bool skip = true;
+    while(skip){
+        skip = false;
+        next.clear();
+        for(int i = 0; i < prev.size(); i++){
+            if(skip){
+                next.push_back(prev[i]);
+                continue;
+            }
+            auto& [val, depth] = prev[i];
+            if(depth > 4){
+                skip = true;
+                if(i - 1 >= 0){
+                    next.back().first += val;
+                }
+                pair<int,int> p{0, depth - 1};
+                next.push_back(p);
+                i++;
+                if(i + 1 >= prev.size()){
+                    next.push_back(p);
+                } else {
+                    auto& [val2, depth2] = prev[i + 1];
+                    next.push_back(make_pair(val2 + prev[i].first, depth2));
+                    i++;
+                }
+            } else if(val > 9){
+                skip = true;
+                next.push_back(make_pair((val / 2), depth + 1));
+                next.push_back(make_pair((val + 1) / 2, depth + 1));
+            } else {
+                next.push_back(prev[i]);
+            }
         }
+        prev = move(next);
     }
-
-    printvp(ret);
-    return ret;
+    
+    // printvp(prev);
+    return prev;
 }
 
 
@@ -74,7 +89,7 @@ vector<pair<int,int>> combine(vector<pair<int,int>>& v1, vector<pair<int,int>>& 
         if(val > 9 || depth + 1 > 4) needReduce = true;
     }
     
-    if(needReduce) return reduce(ret);
+    if(needReduce) return red(ret);
     return ret;
 }
 
