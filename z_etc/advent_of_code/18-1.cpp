@@ -13,7 +13,7 @@ void printvp(vector<pair<int,int>>& vp){
 
 vector<pair<int,int>> inputLine(){
     string line;
-    getline(std::cin, line);
+    getline(cin, line);
 
     vector<pair<int,int>> ret;
     int depth = 0;
@@ -33,8 +33,6 @@ vector<pair<int,int>> inputLine(){
 
 
 vector<pair<int,int>> red(vector<pair<int,int>> prev){
-    // printvp(prev);
-    
     vector<pair<int,int>> next;
     bool skip = true;
     while(skip){
@@ -71,8 +69,6 @@ vector<pair<int,int>> red(vector<pair<int,int>> prev){
         }
         prev = move(next);
     }
-    
-    // printvp(prev);
     return prev;
 }
 
@@ -119,8 +115,11 @@ int main(){
     vector<pair<int,int>> prev{inputLine()};
     while(!cin.eof()){
         vector<pair<int,int>> next{inputLine()};
+        printvp(prev);
+        printvp(next);
         prev = combine(prev, next);
+        printvp(prev);
+        cout << '\n';
     }
-    printvp(prev);
     cout << magnitude(prev) << '\n';
 }
