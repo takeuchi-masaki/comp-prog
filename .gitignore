@@ -18,3 +18,4 @@ out.txt
 test.cpp
 *.plist
 z_etc/advent_of_code/in2.txt
+.DS_Store
