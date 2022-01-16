@@ -15,12 +15,10 @@ int main(){
     long double y0 = 0.5;
 
     long double currY = y0, currT = 0;
-    fout << std::setw(5) << currT << ' ' << currY << '\n';
+    fout << currT << '\t' << currY << '\n';
     for(int cnt = 0; cnt < (targetTime / deltaT); cnt++){
         currY = currY + deltaT * dydt(currT, currY);
         currT += deltaT;
-        // if(cnt % 10 == 9){
-            fout << std::setw(5) << currT << ' ' << currY << '\n';
-        // }
+        fout << currT << '\t' << currY << '\n';
     }
 }
