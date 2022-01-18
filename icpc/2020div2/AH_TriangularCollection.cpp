@@ -11,6 +11,7 @@ int main(){
     for(int i = 0; i < n - 2; i++){
         for(int j = i + 1; j < n - 1; j++){
             int countValid = 0;
+            // alternatively, binary search
             for(int k = j + 1; k < n; k++){
                 if(sides[i] + sides[j] <= sides[k]) break;
                 countValid++;
