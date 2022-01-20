@@ -22,13 +22,15 @@ void solve(){
         prefix[i] = prefix[i - 1] + cnt[i];
     }
     // 1 group
-    int ans = *lower_bound(pow2.begin(), pow2.end(), n) - n + 2;
+    // int ans = *lower_bound(pow2.begin(), pow2.end(), n) - n + 2;
+    int ans = 1e9;
     
     // 2 groups
     for(int i = 0; i <= n; i++){
-        
-        int x;
+        int x = prefix[i], y = prefix[n] - x;
         int currAns = *lower_bound(pow2.begin(), pow2.end(), x) - x + 1;
+        currAns += *lower_bound(pow2.begin(), pow2.end(), y) - y;
+        ans = min(ans, currAns);
     }
 
     // 3 groups

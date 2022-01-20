@@ -3,8 +3,8 @@
 
 const int nn = 1e6;
 int lp[nn+1];
-vector<int> sieve(){
-	vector<int> pr;
+vector<int> pr;
+void sieve(){
 	for (int i=2; i<=nn; ++i) {
 		if (lp[i] == 0) {
 			lp[i] = i;
@@ -13,7 +13,6 @@ vector<int> sieve(){
 		for (int j=0; j<(int)pr.size() && pr[j]<=lp[i] && i*pr[j]<=nn; ++j)
 			lp[i * pr[j]] = pr[j];
 	}
-	return pr;
 }
 
 // bool prime sieve
@@ -46,19 +45,13 @@ map<long long,int> factorize(long long num){
 
 
 // euclidean GCD
-int gcd(int a, int b){
+long long GCD(long long a, long long b){
 	if(b == 0) return a;
-	return gcd(b, a%b);
+	return GCD(b, a % b);
 }
 
-int gcd(int a, int b){
-	int R;
-	while( (a % b) > 0 ){
-		R = a % b;
-		a = b;
-		b = R;
-	}
-	return b;
+long long LCM(long long a, long long b){
+	return (a / GCD(a, b)) * b;
 }
 
 // factmod
@@ -150,10 +143,10 @@ struct UF {
 
 
 // fenwick tree/binary indexed tree [l, r]
-struct FenwickTree {
+struct FT {
     vector<long long> bit;
     int n;
-    FenwickTree(int n) : bit(n, 0), n(n) {}
+    FT(int n) : bit(n, 0), n(n) {}
     long long sum(int r) {
         long long ret = 0;
         for (; r >= 0; r = (r & (r + 1)) - 1)
@@ -169,12 +162,12 @@ struct FenwickTree {
 
 
 // segment tree (default max)
-struct Tree {
+struct SegTree {
 	typedef int T;
 	static constexpr T unit = INT_MIN;
 	T f(T a, T b) { return max(a, b); } // (any associative fn)
 	vector<T> s; int n;
-	Tree(int n = 0, T def = unit) : s(2*n, def), n(n) {}
+	SegTree(int n = 0, T def = unit) : s(2*n, def), n(n) {}
 	void update(int pos, T val) {
 		for (s[pos += n] = val; pos /= 2;)
 			s[pos] = f(s[pos * 2], s[pos * 2 + 1]);
