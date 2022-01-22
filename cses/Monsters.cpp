@@ -78,7 +78,7 @@ int main(){
         auto p = q.front();
         auto [i, j] = p;
         q.pop();
-        vector<pair<int,int>> directions = {
+        pair<int,int> directions[] = {
             {i - 1, j},
             {i + 1, j},
             {i, j - 1},

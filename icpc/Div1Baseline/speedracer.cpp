@@ -31,7 +31,7 @@ int main(){
     while(cin >> a >> b >> c >> d >> m >> t){
         // cout << a << ' ' << b << ' ' << c << ' ' << d << ' ' << m << ' ' << t << endl;
         long double low = 0, high = 1000;
-        while(high-low > 0.01){
+        while(high - low > 1e-6){
             long double mid = low + (high-low)/2;
             if( ok(mid) ){
                 low = mid;

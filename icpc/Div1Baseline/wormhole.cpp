@@ -27,11 +27,12 @@ void solve(){
                 d *= d;
                 sum += d;
             }
-            sum = sqrt(sum);
+            sum = round(sqrtl(sum));
             dist[i][j] = sum;
             dist[j][i] = sum;
         }
     }
+    for(int i = 0; i < p; i++) dist[i][i] = 0;
 
     cin >> w;
     for(int i = 0; i < w; i++){
@@ -44,7 +45,9 @@ void solve(){
     for(int k = 0; k < p; k++){
         for(int i = 0; i < p; i++){
             for(int j = 0; j < p; j++){
-                dist[i][j] = min( dist[i][j], dist[i][k] + dist[k][j] );
+                if(dist[i][k] < INF && dist[k][j] < INF){
+                    dist[i][j] = min( dist[i][j], dist[i][k] + dist[k][j] );
+                }
             }
         }
     }
@@ -61,11 +64,11 @@ void solve(){
 
 int main(){
     ios::sync_with_stdio(false); cin.tie(nullptr);
-    freopen("wormhole.in","r",stdin); freopen("out.txt","w",stdout);
+    // freopen("wormhole.in","r",stdin); freopen("out.txt","w",stdout);
     int T = 1;
     cin >> T;
     for(int i = 1; i <= T; i++) {
-        cout << "Case #" << i << ": \n";
+        cout << "Case " << i << ": \n";
         solve();
     }
 }

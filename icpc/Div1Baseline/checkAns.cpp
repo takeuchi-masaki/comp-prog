@@ -5,21 +5,21 @@ int main(){
     ios::sync_with_stdio(false); cin.tie(nullptr);
 
     bool ok = true;
-
-    freopen("wormhole.out", "r", stdin);
-    vector<string> s1;
     string s;
-    while( cin >> s ){
-        s1.push_back(s);
+
+    ifstream fin1{"speed.out"};
+    vector<string> s1;
+    while(getline(fin1, s)){
+        s1.push_back(move(s));
     }
-    freopen("out.txt", "r", stdin);
+
+    ifstream fin2{"out.txt"};
     int i = 0;
-    while( cin >> s ){
-        if(s != s1[i]){
+    while(getline(fin2, s)){
+        if(s != s1[i++]){
             cout << "NG line " << i << endl;
             ok = false;
         }
-        i++;
     }
     if(ok){
         cout << "ALL CLEAR\n";
