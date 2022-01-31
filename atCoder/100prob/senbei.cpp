@@ -19,10 +19,15 @@ int main(){
                 fliprow[bit] = true;
             }
         }
-
         int curr = 0;
         for(int col = 0; col < c; col++){
-            
+            int colTotal = 0;
+            for(int row = 0; row < r; row++){
+                colTotal += grid[row][col]^fliprow[row];
+            }
+            curr += max(colTotal, r - colTotal);
         }
+        ans = max(ans, curr);
     }
+    cout << ans << '\n';
 }
