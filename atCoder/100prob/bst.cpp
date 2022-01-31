@@ -1,5 +1,6 @@
 #include <iostream>
 #include <random>
+using namespace std;
 
 class BST{
     struct Node{
@@ -56,17 +57,21 @@ private:
         }
     }
 
-    bool checkValid(Node* curr){
-        if(curr == nullptr) return true;
-        if(curr->left != nullptr){
-            if(curr->left->val > curr->val) return false;
-            if(!checkValid(curr->left)) return false;
-        }
-        if(curr->right != nullptr){
-            if(curr->right->val < curr->val) return false;
-            if(!checkValid(curr->right)) return false;
+    bool isValidBST(Node* root) {
+        if(root == nullptr) return true;
+        std::vector<int> v;
+        inOrder(root, v);
+        for(int i = 0; i < v.size() - 1; i++){
+            if(v[i] >= v[i + 1]) return false;
         }
         return true;
+    }
+    
+    void inOrder(Node* curr, std::vector<int>& v){
+        if(curr == nullptr) return;
+        inOrder(curr->left, v);
+        v.push_back(curr->val);
+        inOrder(curr->right, v);
     }
 
     void print(Node* curr){

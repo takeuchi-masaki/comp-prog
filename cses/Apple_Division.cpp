@@ -6,7 +6,7 @@ int main(){
     int n; cin >> n;
     vector<int> arr(n);
     for(int & i : arr) cin >> i;
-    long long currMin = 1e10;
+    long long currMin = 1e18;
     for(int mask = 0; mask < (1<<n); mask++){
         long long a = 0, b = 0;
         for(int bit = 0; bit < n; bit++){
