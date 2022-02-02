@@ -7,15 +7,15 @@ int main(){
     vector<int> a(n);
     for(int& i : a) cin >> i;
     
-    stack<int> st;
+    vector<int> st;
     int ans = 0;
     for(int i : a){
-        while(!st.empty() && st.top() < i){
-            st.pop();
+        while(!st.empty() && st.back() < i){
+            st.pop_back();
             ans++;
         }
         if(!st.empty()) ans++;
-        st.push(i);
+        st.push_back(i);
     }
     cout << ans << '\n';
 }
