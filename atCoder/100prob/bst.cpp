@@ -29,6 +29,10 @@ public:
         print(root);
     }
 
+    int getHeight(){
+        return getHeight(root);
+    }
+
 private:
     void insert(Node* curr, int val){
         if(curr == nullptr) return;
@@ -79,6 +83,11 @@ private:
         print(curr->left);
         std::cout << curr->val << ' ';
         print(curr->right);
+    }
+
+    int getHeight(Node* curr){
+        if(curr == nullptr) return 0;
+        return max(getHeight(curr->left), getHeight(curr->right)) + 1;
     }
 };
 

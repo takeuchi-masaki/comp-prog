@@ -8,6 +8,11 @@ int main(){
     int currIndex = 0;
     for(int i = 1; i <= n; i++){
         string curr = to_string(i);
+        // if (string_view{s.data() + currIndex, curr.size()} != curr){
+        //     cout << i << '\n';
+        //     return 0;
+        // }
+
         for(int j = currIndex; j < currIndex + curr.size(); j++){
             if(s[j] != curr[j - currIndex]){
                 cout << i << '\n';
