@@ -4,23 +4,23 @@ using namespace std;
 int main(){
     ios::sync_with_stdio(false); cin.tie(nullptr);
     int n, m; cin >> n >> m;
-    set<string> st;
+    set<string> curr_set;
     for(int j = 0; j < m; j++){
         string s; cin >> s;
-        st.insert(s);
+        curr_set.insert(s);
     }
     for(int i = 1; i < n; i++){
-        set<string> next_st;
+        set<string> next_set;
         for(int j = 0; j < m; j++){
             string s; cin >> s;
-            if(st.count(s)){
-                next_st.insert(s);
+            if(curr_set.count(s)){
+                next_set.insert(s);
             }
         }
-        st = move(next_st);
+        curr_set = move(next_set); // move semantics
     }
-    cout << st.size() << '\n';
-    for(string s : st){
+    cout << curr_set.size() << '\n';
+    for(string s : curr_set){ // set is already in order
         cout << s << '\n';
     }
 }
