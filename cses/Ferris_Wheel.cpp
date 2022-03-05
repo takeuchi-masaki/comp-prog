@@ -3,22 +3,20 @@ using namespace std;
 
 int main(){
     ios::sync_with_stdio(false); cin.tie(nullptr);
-    int children_count, maxWeight; cin >> children_count >> maxWeight;
-    deque<int> children;
-    for(int i = 0; i < children_count; i++){
-        int child; cin >> child;
-        children.push_back(child);
-    }
-    sort(children.begin(), children.end());
+    int n, maxW; cin >> n >> maxW;
+    vector<int> child(n);
+    for(int& i : child) cin >> i;
+    sort(child.begin(), child.end());
+    int l = 0, r = n - 1;
     int ans = 0;
-    while(!children.empty()){
+    while(r - l >= 0){
         ans++;
-        if(children.size() == 1) break;
-        if(children.back() + children.front() > maxWeight){
-            children.pop_back();
+        if(r == l) break;
+        if(child[l] + child[r] <= maxW){
+            r--;
+            l++;
         } else {
-            children.pop_back();
-            children.pop_front();
+            r--;
         }
     }
     cout << ans << '\n';
