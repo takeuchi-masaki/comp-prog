@@ -29,14 +29,6 @@ int main(){
     dist[n-1] += powl(points[n - 1].second - points[n - 1+1].second, 2);
     dist[n-1] = sqrtl(dist[n - 1]);
     prefix[n - 1 + 1] = prefix[n - 1] + dist[n - 1];
-    // for(auto ld : dist){
-    //     cout << ld << ' ';
-    // }
-    // cout << '\n';
-    // for(auto ld : prefix){
-    //     cout << ld << ' ';
-    // }
-    // cout << '\n';
 
     vector<pair<long double, long double>> pts_ld(n);
     for(int i = 0; i < n; i++) {
@@ -44,13 +36,14 @@ int main(){
         pts_ld[i].second = points[i].second;
     }
     long double totalArea = getArea(pts_ld);
-    long double halfArea = totalArea / 2;
+    // long double halfArea = totalArea / 2;
     // cout << totalArea << '\n';
 
     // binary search on circumference
     pair<long double, long double> ans;
     long double l = 0, r = prefix.back();
-    while(r - l > 1e-6){
+    int cnt = 0;
+    while(r - l > 1e-10 && cnt++ < 200){
         long double mid = l + (r - l)/2;
         int d = 0;
         for(int i = 1; i <= n; i++){
@@ -83,13 +76,14 @@ int main(){
         // long double a1 = getArea(poly1), a2 = getArea(poly2);
         long double a1 = getArea(poly1);
         // cout << a1 << ' ' << a2 << '\n';
-        if(a1 <= halfArea){
+        if(2*a1 <= totalArea){
             l = mid;
         } else {
             r = mid;
         }
         ans = move(add_point);
+        // cout << ans.first << ' ' << ans.second << '\n';
     }
-    cout << fixed << setprecision(6);
+    cout << fixed << setprecision(10);
     cout << ans.first << ' ' << ans.second << '\n';
 }

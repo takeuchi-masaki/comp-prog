@@ -6,7 +6,7 @@ int main(){
     string a, b; cin >> a >> b;
     int ans = 1;
     for(int i = 0; i < a.size(); i++){
-        if(a[i] != b[i]) ans<<=1;
+        if(a[i] != b[i]) ans<<=1; // ans /= 2;
     }
     cout << ans << '\n';
 }
