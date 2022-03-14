@@ -185,7 +185,7 @@ struct FT{
 			i += i & -i;
 		}
 	}
-}
+};
 
 
 // segment tree (default max)
