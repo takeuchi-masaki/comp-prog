@@ -55,22 +55,15 @@ long long LCM(long long a, long long b){
 }
 
 // factmod
-const int mod = 1e9;
-int factmod(int n) {
-    int p = mod;
-    vector<int> f(p);
-    f[0] = 1;
-    for (int i = 1; i < p; i++)
-        f[i] = f[i-1] * i % p;
+const long long mod = 1e9 + 7;
 
-    int res = 1;
-    while (n > 1) {
-        if ((n/p) % 2)
-            res = p - res;
-        res = res * f[n%p] % p;
-        n /= p;
+long long factmod(long long n){
+    if (n >= mod) return 0;
+    long long result = 1;
+    for (int i = 1; i <= n; i++){
+        result = (result * i) % mod;
     }
-    return res; 
+    return result;
 }
 
 // ncr

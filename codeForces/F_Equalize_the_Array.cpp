@@ -1,41 +1,59 @@
-#include <iostream>
-#include <unordered_map>
-#include <map>
-#include <vector>
-#include <algorithm>
-#include <iterator>
-
+#include <bits/stdc++.h>
 using namespace std;
 
+struct FT{
+	vector<long long> bit;
+	int n;
+	FT(int n) : bit(n+1, 0), n(n) {}
+	long long sum(int r){
+		long long ret = 0;
+		while(r > 0){
+			ret += bit[r];
+			r -= r & -r;
+		}
+		return ret;
+	}
+	
+	long long sum(int l, int r){
+		return sum(r) - sum(l);
+	}
+	
+	void add(int i, int k){
+		while(i < bit.size()){
+			bit[i] += k;
+			i += i & -i;
+		}
+	}
+};
+
 void solve(){
-    int n;
-    cin >> n;
-    unordered_map<int,int> nums;
+    int n; cin >> n;
+    map<int, int> m;
     for(int i = 0; i < n; i++){
-        int temp; cin >> temp;
-        nums[temp]++;
+        int num; cin >> num;
+        m[num]++;
     }
-    map<int,int> cnt;
-    for(auto& [x,y]:nums){
-        cnt[y]++;
+
+    vector<int> frq;
+    for(auto[a, b] : m){
+        frq.push_back(b);
     }
-    int res = n;
-    int l = 0, r = n, rCnt = cnt.size();
-    for(auto [x,y]:cnt){
-        res = min(res, l + r - rCnt*x);
-        l+=x*y;
-        r-=x*y;
-        rCnt-=y;
+    sort(frq.begin(), frq.end());
+    int F = frq.size();
+    
+    int ans = 0;
+    for(int i = 0; i < F; i++){
+        ans = min(ans, frq[i] * (F - i));
     }
-    cout << res << '\n';
+
+    cout << n - ans << '\n';
 }
 
-
 int main(){
-    ios::sync_with_stdio(false); cin.tie(0);
-    int t;
-    cin >> t;
-    while(t--){
+    ios::sync_with_stdio(false); cin.tie(nullptr);
+    int T = 1;
+    cin >> T;
+    for(int i = 1; i <= T; i++) {
         solve();
     }
 }
