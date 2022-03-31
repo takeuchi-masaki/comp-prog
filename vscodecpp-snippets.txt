@@ -1,25 +1,26 @@
 {
 	"ttemplate": {
-	"prefix": "ttemplate",
-	"body": [
-		"#include <bits/stdc++.h>",
-		"using namespace std;",
-		"",
-		"void solve(){",
-		"    $0",
-		"",
-		"}",
-		"",
-		"int main(){",
-		"    ios::sync_with_stdio(false); cin.tie(nullptr);",
-		"    int T = 1;",
-		"    cin >> T;",
-		"    for(int i = 1; i <= T; i++) {",
-		"        solve();",
-		"    }",
-		"}"
-	],
-	"description": "c++ template"
+		"prefix": "ttemplate",
+		"body": [
+			"#include <bits/stdc++.h>",
+			"using namespace std;",
+			"",
+			"void solve(){",
+			"\t$0",
+			"",
+			"}",
+			"",
+			"int main(){",
+			"\tios::sync_with_stdio(false); cin.tie(nullptr);",
+			"\tcin.exceptions(cin.failbit);",
+			"\tint T = 1;",
+			"\tcin >> T;",
+			"\tfor(int i = 1; i <= T; i++) {",
+			"\t\tsolve();",
+			"\t}",
+			"}"
+		],
+		"description": "c++ template"
 	},
 
 	"template": {
@@ -28,9 +29,15 @@
 			"#include <bits/stdc++.h>",
 			"using namespace std;",
 			"",
+			"void solve(){",
+			"\t$0",
+			"",
+			"}",
+			"",
 			"int main(){",
-			"    ios::sync_with_stdio(false); cin.tie(nullptr);",
-			"    $0",
+			"\tios::sync_with_stdio(false); cin.tie(nullptr);",
+			"\tcin.exceptions(cin.failbit);",
+			"\tsolve();",
 			"}"
 		],
 		"description": "c++ template"
@@ -50,8 +57,8 @@
 			"",
 			"int main() {",
 			"    // freopen(\"${TM_FILENAME_BASE}.in\",\"r\",stdin); freopen(\"${TM_FILENAME_BASE}.out\",\"w\",stdout);",
-			"    $0",
-			"    ",
+			"\t$0",
+			"\t",
 			"    return 0;",
 			"}"
 		],
@@ -68,7 +75,7 @@
 
 	"ll": {
 		"prefix": "long long",
-		"body": "long long",
+		"body": " long long",
 		"description": "auto-complete long long"
 	},
 
