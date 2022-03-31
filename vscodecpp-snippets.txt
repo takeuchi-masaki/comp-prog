@@ -96,5 +96,29 @@
 		  "};"
 		],
 		"description": "custom hash"
-	  }
+	},
+
+	"vector int": {
+		"prefix": "vi",
+		"body": "vector<int>",
+		"description": "vector int"
+	},
+
+	"popcount": {
+		"prefix": "popcount",
+		"body": "__builtin_popcount($0)",
+		"description": "g++ builtin popcount shortcut"
+	},
+
+	"pair int int":{
+		"prefix": "pii",
+		"body": "pair<int, int>",
+		"description": "pair int int"
+	},
+
+	"pair long long long long":{
+		"prefix": "pll",
+		"body": "pair<long long, long long>",
+		"description": "pair long long"
+	}
 }
