@@ -1,47 +1,49 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<int> pow2;
-
-void find_pow2(){
-    int curr = 1;
-    while(curr <= 2e5){
-        pow2.push_back(curr);
-        curr<<=1;
-    }
-}
-
 void solve(){
     int n; cin >> n;
-    vector<int> prefix(n + 1), cnt(n + 1);
-    for(int i = 0; i < n; i++){
-        int w; cin >> w;
-        cnt[w]++;
+    vector<int> a(n);
+    for(int& i : a) cin >> i;
+    sort(a.begin(), a.end());
+    vector<int> frq;
+    frq.push_back(1);
+    for(int i = 1; i < n; i++){
+        if(a[i] == a[i - 1]){
+            frq.back()++;
+        } else {
+            frq.push_back(1);
+        }
     }
-    for(int i = 1; i <= n; i++){
-        prefix[i] = prefix[i - 1] + cnt[i];
-    }
-    // 1 group
-    // int ans = *lower_bound(pow2.begin(), pow2.end(), n) - n + 2;
-    int ans = 1e9;
-    
-    // 2 groups
-    for(int i = 0; i <= n; i++){
-        int x = prefix[i], y = prefix[n] - x;
-        int currAns = *lower_bound(pow2.begin(), pow2.end(), x) - x + 1;
-        currAns += *lower_bound(pow2.begin(), pow2.end(), y) - y;
-        ans = min(ans, currAns);
+    for(int i = 1; i < int(frq.size()); i++){
+        frq[i] += frq[i - 1];
     }
 
-    // 3 groups
+    int ans = 1e9;
+    int loop = 20;
+    for(int i = 0; i < loop; i++){
+        for(int j = 0; j < loop; j++){
+            for(int k = 0; k < loop; k++){
+                int g1 = 1<<i;
+                int g2 = 1<<j;
+                int g3 = 1<<k;
+                int pos = upper_bound(frq.begin(), frq.end(), g1) - frq.begin();
+                if(pos) g2 += frq[pos - 1];
+                pos = upper_bound(frq.begin()+pos, frq.end(), g2) - frq.begin();
+                if(pos) g3 += frq[pos - 1];
+                auto it = upper_bound(frq.begin()+pos, frq.end(), g3);
+                if(it == frq.end()){
+                    ans = min(ans, (1<<i) + (1<<j) + (1<<k) - n);
+                }
+            }
+        }
+    }
     cout << ans << '\n';
 }
 
 int main(){
     ios::sync_with_stdio(false); cin.tie(nullptr);
-
-    find_pow2();
-
+    cin.exceptions(cin.failbit);
     int T = 1;
     cin >> T;
     for(int i = 1; i <= T; i++) {
