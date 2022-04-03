@@ -1,39 +1,42 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<vector<int>> adj;
-vector<int> to_void;
-vector<bool> used;
+long long ans;
 
-
-long long go(int idx, long long sum, int currMax){
-    
-
+int simplify(int i, vector<int>& a, vector<vector<int>>& to){
+    if(to[i].empty()) return a[i];
+    long long currSum = 0;
+    int currMin = 1e9 + 5;
+    for(int prev : to[i]){
+        int val = simplify(prev, a, to);
+        currMin = min(currMin, val);
+        currSum += val;
+    }
+    if(to[i].size() >= 2) ans += currSum - currMin;
+    return max(currMin, a[i]);
 }
 
 void solve(){
-    adj.clear();
-    to_void.clear();
-    used.clear();
-
     int n; cin >> n;
-    vector<int> a(n);
+    vector<int> a(n), to_void;
     for(int& i : a) cin >> i;
-    adj.resize(n);
-    used.resize(n);
+    vector<vector<int>> to(n);
+
     for(int i = 0; i < n; i++){
-        int to; cin >> to;
-        if(to == 0) {
-            to_void.push_back(i);
+        int next; cin >> next;
+        next--;
+        if(next != -1) {
+            to[next].push_back(i);
         } else {
-            adj[to - 1].push_back(i);
+            to_void.push_back(i);
         }
     }
-
-    long long ans = 0;
+    
+    ans = 0;
     for(int i : to_void){
-        
+        ans += simplify(i, a, to);
     }
+    cout << ans << '\n';
 }
 
 int main(){
