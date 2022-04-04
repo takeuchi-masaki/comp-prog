@@ -1,36 +1,44 @@
-#include <iostream>
-#include <vector>
-#include <iomanip>
-
+#include <bits/stdc++.h>
 using namespace std;
 
-double getRoot(int square){
-    double l = 0.1, r = 2000*2000; 
-    for(int i = 1; i <= 100; i++){
-        double m = (l+r) / 2;
-        if(m*m <= square){
-            l = m;
-        } else {
-            r = m;
+int n;
+long double total = 0;
+int iterations = 0;
+vector<int> x, y;
+
+void dfs(vector<int> & path, vector<bool> & used){
+    if(path.size() != n){
+        for(int i = 0; i < n; i++){
+            if(used[i]) continue;
+            used[i] = true;
+            path.push_back(i);
+            dfs(path, used);
+            used[i] = false;
+            path.pop_back();
         }
+        return;
     }
-    return l;
+    int currX = x[path[0]], currY = y[path[0]];
+    for(int idx = 1; idx < n; idx++){
+        int nextX = x[path[idx]], nextY = y[path[idx]];
+        long double currDist = sqrtl( (currX-nextX)*(currX-nextX) + (currY-nextY)*(currY-nextY) );
+        total += currDist;
+        currX = nextX, currY = nextY;
+    }
+    iterations++;
 }
 
 int main(){
-    int n;
+    ios::sync_with_stdio(false); cin.tie(nullptr);
     cin >> n;
-    vector<int> x(n), y(n);
-    double sum = 0;
+    x = y = vector<int>(n);
     for(int i = 0; i < n; i++){
         cin >> x[i] >> y[i];
     }
-    for(int i = 0; i < n; i++){
-        for(int j = i+1; j < n; j++){
-            int diffX = abs(x[i]-x[j]);
-            int diffY = abs(y[i]-y[j]);
-            sum += getRoot(diffX*diffX + diffY*diffY);
-        }
-    }
-    cout << fixed << setprecision(10) << sum/(n/2.0);
+    vector<int> path;
+    vector<bool> used(n, false);
+    dfs(path, used);
+
+    total /= iterations;
+    cout << fixed << setprecision(10) << total << endl;
 }

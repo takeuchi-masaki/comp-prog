@@ -6,28 +6,27 @@ int main(){
     // freopen("input.txt","r",stdin); freopen("out.txt","w",stdout);
     ios::sync_with_stdio(false); cin.tie(nullptr);
     long long n, k; cin >> n >> k;
-    vector<long long> a(n), total(n), initial(n);
-    for(long long&i:a)cin>>i;
+    vector<long long> a(n), less(n,0);
+    for(long long &i:a) cin >> i;
+    long long ans = 0;
+    for(int i = 0; i < n-1; i++){
+        for(int j = i+1; j < n; j++){
+            if(a[i] > a[j]) ans++;
+        }
+    }
+    cout << ans << endl;
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
-            if(a[j] < a[i]){
-                total[i]++;
-            }
+            if(a[i] > a[j]) less[i]++;
         }
     }
-    for(int i = 0; i < n; i++){
-        for(int j = i+1; j < n; j++){
-            if(a[j] < a[i]) initial[i]++;
-        }
+    long long mult = k*(k+1)/2 %MOD;
+
+
+    for(long long num:less){
+
+        ans = (ans + mult*num) %MOD;
     }
-    long long mult = k*(k-1)/2;
-    mult %= MOD;
-    long long ans = 0;
-    for(int i = 0; i < n; i++){
-        ans = (ans + initial[i]*k) %MOD;
-        long long add = mult*total[i];
-        add %= MOD;
-        ans = (ans + add)%MOD;
-    }
+
     cout << ans << endl;
 }
