@@ -1,66 +1,35 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-string s;
-int cnt = 0;
-const int N = 7;
-vector<vector<bool>> visited(N, vector<bool>(N, false));
-vector<char> symbols = { 'D', 'U', 'L', 'R' };
-map<char, int> idx;
+const long long MOD = 1e9 + 7;
 
-void dfs(int currI, int currJ, string & path){
-    if(path.size() == 48){
-        if(currI != N-1 || currJ != 0) return;
-        cnt++;
-        return;
-    }
-    vector<pair<int,int>> directions = {
-        {currI-1, currJ},
-        {currI+1, currJ},
-        {currI, currJ-1},
-        {currI, currJ+1}
-    };
-    if(s[path.size()] == '?'){
-        for(int i = 0; i < 4; i++){
-            auto p = directions[i];
-            if(p.first < 0 
-            || p.second < 0
-            || p.first >= N
-            || p.second >= N){
-                continue;
+void solve(){
+    int n; cin >> n;
+    vector<string> vs(n);
+    for(string& s : vs) cin >> s;
+    // '.' empty
+    // '*' trap
+
+    vector<vector<long long>> dp(n + 1, vector<long long>(n + 1));
+    if(vs[0][0] != '*') dp[0][0] = 1;
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            if(dp[i][j] == 0) continue;
+            if(i + 1 < n && vs[i + 1][j] != '*'){
+                dp[i + 1][j] += dp[i][j];
+                dp[i + 1][j] %= MOD;
             }
-            if(visited[p.first][p.second]) continue;
-            visited[p.first][p.second] = true;
-            path.push_back(symbols[i]);
-            dfs(p.first, p.second, path);
-            visited[p.first][p.second] = false;
-            path.pop_back();
+            if(j + 1 < n && vs[i][j + 1] != '*'){
+                dp[i][j + 1] += dp[i][j];
+                dp[i][j + 1] %= MOD;
+            }
         }
-        return;
     }
-    char letter = s[path.size()];
-    auto p = directions[idx[letter]];
-    if(p.first < 0 
-    || p.second < 0
-    || p.first >= N
-    || p.second >= N){
-        return;
-    }
-    if(visited[p.first][p.second]) return;
-    visited[p.first][p.second] = true;
-    path.push_back(symbols[idx[letter]]);
-    dfs(p.first, p.second, path);
-    visited[p.first][p.second] = false;
-    path.pop_back();
+    cout << dp[n - 1][n - 1] << '\n';
 }
 
 int main(){
     ios::sync_with_stdio(false); cin.tie(nullptr);
-    cin >> s;
-    string path = "";
-    visited[0][0] = true;
-    for(int i = 0; i < 4; i++){
-        idx[symbols[i]] = i;
-    }
-    dfs(0, 0, path);
+    cin.exceptions(cin.failbit);
+    solve();
 }
