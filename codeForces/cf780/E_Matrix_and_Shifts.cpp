@@ -5,25 +5,18 @@ void solve(){
     int n; cin >> n;
     vector<string> grid(n);
     for(string& s : grid) cin >> s;
-    int cnt1 = 0;
-    for(int i = 0; i < n; i++){
-        for(int j = 0; j < n; j++){
-            if(grid[i][j] == '1') cnt1++;
-        }
-    }
 
-    vector<int> row(n), col(n);
-    for(int i = 0; i < n; i++){
-        for(int j = 0; j < n; j++){
-            row[i] += grid[i][j] == '1';
-            col[i] += grid[j][i] == '1';
+    int mx_diag = 0, cnt1 = 0;
+    for(int col = 0; col < n; col++){
+        int curr = 0;
+        for(int row = 0; row < n; row++){
+            if(grid[row][(col + row) % n] == '1') curr++;
         }
+        mx_diag = max(mx_diag, curr);
+        cnt1 += curr;
     }
-    // int ans = 0;
-    // for(int i = 0; i < n; i++){
-    //     ans += abs(row[i] + col[i] - 2);
-    // }
-    // cout << ans << '\n';
+    
+    cout << (n - mx_diag) + (cnt1 - mx_diag) << '\n';
 }
 
 int main(){

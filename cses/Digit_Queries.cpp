@@ -1,35 +1,35 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int getDigit(long long num, int digit){
-    // from most significant first
-    string n = to_string(num);
-    return *(n.end()-digit-1) - '0';
-}
+vector<long long> DIGIT;
 
 void solve(){
-    long long k; cin >> k;
-    long long total = 0, mult1 = 9, mult2 = 1;
-    while(true){
-        long long next = total + mult1 * mult2;
-        if(next >= k) break;
-        total = next;
-        // cout << total << '\n';
-        mult1 *= 10;
-        mult2++;
-    }
-    // previous = total
-    // (n - total) / mult2
-    mult1 /= 10;
-    long long diff = k - total;
-    long long num = (diff + mult2 - 1) / mult2 + total;
-    long long digit = diff % mult2;
-    cout << k << ' ' << num << ' ' << digit << '\n';
-    cout << getDigit(num, digit) << '\n';
+    long long n; cin >> n;
+    auto lb = lower_bound(DIGIT.begin(), DIGIT.end(), n);
+    int digits = lb - DIGIT.begin();
+    long long pow10 = 1;
+    for(int i = 0; i < digits; i++) pow10 *= 10;
+    pow10--;
+    long long cnt = (*lb - n) / digits, rem = (*lb - n) % digits;
+    long long curr = pow10 - cnt;
+    cout << to_string(curr)[digits - 1 - rem] << '\n';
 }
 
 int main(){
     ios::sync_with_stdio(false); cin.tie(nullptr);
+    cin.exceptions(cin.failbit);
+
+    DIGIT.push_back(0);
+    const long long MX = 1e18;
+    long long cumu = 0, pow10 = 1;
+    int digitLen = 1;
+    while(cumu < MX){
+        cumu += digitLen * 9 * pow10;
+        DIGIT.push_back(cumu);
+        digitLen++;
+        pow10 *= 10;
+    }
+
     int T = 1;
     cin >> T;
     for(int i = 1; i <= T; i++) {
