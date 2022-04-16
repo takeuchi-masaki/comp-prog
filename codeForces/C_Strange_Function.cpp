@@ -11,8 +11,7 @@ void solve() {
 	while (mult <= n) {
 		ans = (ans + n / mult) % MOD;
         curr++;
-        cout << curr << ' ' << n/mult << '\n';
-		mult *= curr;
+		mult = lcm(mult, curr);
 	}
 	cout << ans << '\n';
 }
