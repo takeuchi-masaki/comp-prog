@@ -1,16 +1,19 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
 void solve() {
 	int n;
 	cin >> n;
-	vector<int> a(n);
-	for (int& i: a) cin >> i;
-	long long sum = accumulate(a.begin(), a.end(), 0LL);
-	int cnt_1 = sum / n;
-	for(int i = n - 1; i >= 0; i--){
-		
+	vector<long long> a(n);
+	for (auto& i: a) cin >> i;
+	vector<pair<long long, int>> pref(n);
+	pref[0] = { a[0], 0 };
+	for (int i = 1; i < n; i++) {
+		pref[i] = { pref[i - 1].first + a[i], i };
 	}
+	
+    cout << res << '\n';
 }
 
 int main() {

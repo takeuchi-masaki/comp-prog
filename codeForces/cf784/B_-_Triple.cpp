@@ -4,13 +4,19 @@ using namespace std;
 void solve() {
 	int n;
 	cin >> n;
-	vector<int> a(n);
-	for (int& i: a) cin >> i;
-	long long sum = accumulate(a.begin(), a.end(), 0LL);
-	int cnt_1 = sum / n;
-	for(int i = n - 1; i >= 0; i--){
-		
+	map<int, int> m;
+	for (int i = 0; i < n; i++) {
+		int num;
+		cin >> num;
+		m[num]++;
 	}
+    for(auto& [num, cnt]: m){
+        if(cnt >= 3){
+            cout << num << '\n';
+            return;
+        }
+    }
+    cout << "-1\n";
 }
 
 int main() {
