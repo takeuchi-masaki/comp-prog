@@ -15,7 +15,7 @@
 			"\tcin.exceptions(cin.failbit);",
 			"\tint T = 1;",
 			"\tcin >> T;",
-			"\tfor(int i = 1; i <= T; i++) {",
+			"\tfor (int i = 1; i <= T; i++) {",
 			"\t\tsolve();",
 			"\t}",
 			"}"
@@ -34,7 +34,7 @@
 			"",
 			"}",
 			"",
-			"int main(){",
+			"int main() {",
 			"\tcin.tie(nullptr)->sync_with_stdio(false);",
 			"\tcin.exceptions(cin.failbit);",
 			"\tsolve();",
@@ -76,7 +76,7 @@
 		  "",
 		  "}",
 		  "",
-		  "int main(){",
+		  "int main() {",
 		  "\tcin.tie(nullptr)->sync_with_stdio(false);",
 		  "    cin.exceptions(cin.failbit);",
 		  "    int T = 1;",
@@ -93,7 +93,8 @@
 	"freopen": {
 		"prefix": "openfile",
 		"body": [
-			"freopen(\"in.txt\",\"r\",stdin); freopen(\"out.txt\",\"w\",stdout);"
+			"freopen(\"in.txt\",\"r\",stdin);",
+			"freopen(\"out.txt\",\"w\",stdout);"
 		],
 		"description": "use file input output"
 	},
@@ -225,6 +226,6 @@
 		"\treturn result;",
 		"}"
 	],
-	"description": "a^b mod MOD"
+	"description": "a^b % MOD, karatsuba multiplication"
 	}
 }

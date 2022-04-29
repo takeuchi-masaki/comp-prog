@@ -10,13 +10,13 @@ void solve() {
 		cin >> num;
 		m[num]++;
 	}
-    for(auto& [num, cnt]: m){
-        if(cnt >= 3){
-            cout << num << '\n';
-            return;
-        }
-    }
-    cout << "-1\n";
+	for (auto& [num, cnt]: m) {
+		if (cnt >= 3) {
+			cout << num << '\n';
+			return;
+		}
+	}
+	cout << "-1\n";
 }
 
 int main() {

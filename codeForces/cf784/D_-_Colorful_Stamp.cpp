@@ -15,16 +15,13 @@ void solve(){
             idx_white.push_back(i);
         }
     }
-    if((int)idx_white.size() == n){
-        ans(true);
-        return;
-    }
-
+    idx_white.push_back(n);
+    
     int start = 0;
     for(int i = 0; i < (int)idx_white.size(); i++){
         int end = idx_white[i];
-        if(end - start == 0){
-            start = end + 1;
+        if(end == start){
+            start++;
             continue;
         }
         int cntB = 0, cntR = 0;
@@ -41,19 +38,7 @@ void solve(){
         }
         start = end + 1;
     }
-    if(start == n){
-        ans(true);
-        return;
-    }
-    int cntB = 0, cntR = 0;
-    for(int j = start; j < n; j++){
-        if(s[j] == 'B'){
-            cntB++;
-        } else {
-            cntR++;
-        }
-    }
-    ans(cntB && cntR);
+    ans(true);
 }
 
 int main(){

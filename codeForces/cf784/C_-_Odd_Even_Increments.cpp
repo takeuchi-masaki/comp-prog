@@ -6,25 +6,21 @@ void solve() {
 	cin >> n;
 	vector<int> a(n);
 	for (int& i: a) cin >> i;
-	bool sameParity1 = true, sameParity2 = true;
-
-	for (int i = 2; i < n; i += 2) {
-		sameParity1 = ((a[i] & 1) == (a[i - 2] & 1));
-        if(!sameParity1) {
-            break;
-        }
+	bool parityEven = a[0] & 1, parityOdd = a[1] & 1;
+	for (int i = 2; i < n; i++) {
+		if (i & 1) {
+			if ((a[i] & 1) != parityOdd) {
+				cout << "NO\n";
+				return;
+			}
+		} else {
+			if ((a[i] & 1) != parityEven) {
+				cout << "NO\n";
+				return;
+			}
+		}
 	}
-    for(int i = 3; i < n; i += 2){
-        sameParity2 = ((a[i] & 1) == (a[i - 2] & 1));
-        if(!sameParity2) {
-            break;
-        }
-    }
-    if(sameParity1 && sameParity2){
-        cout << "YES\n";
-    } else {
-        cout << "NO\n";
-    }
+	cout << "YES\n";
 }
 
 int main() {
