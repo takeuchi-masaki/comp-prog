@@ -4,13 +4,30 @@ using namespace std;
 void solve() {
 	int n;
 	cin >> n;
-	vector<int> a(n);
+	vector<int> a(n), ans(n);
 	for (int& i: a) cin >> i;
-	long long sum = accumulate(a.begin(), a.end(), 0LL);
-	int cnt_1 = sum / n;
-	for(int i = n - 1; i >= 0; i--){
-		
+
+	queue<int> idx;
+	for (int i = 0; i < n; i++) {
+		if(a[i] == 0) {
+			ans[i] = 0;
+		} else if(idx.empty()) {
+			ans[i] = 1;
+			idx.push(a[i]);
+		} else if(i == idx.front()) {
+			ans[i] = 0;
+			idx.pop();
+			idx.push(a[i] + i);
+		} else {
+			ans[i] = 1;
+			idx.push(a[i]);
+		}
 	}
+
+	for (int i: ans) {
+		cout << i << ' ';
+	}
+	cout << '\n';
 }
 
 int main() {

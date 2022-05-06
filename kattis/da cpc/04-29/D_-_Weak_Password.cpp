@@ -11,15 +11,15 @@ void solve() {
 		if (i > 1 && a[i] != a[i - 1]) {
 			allSame = false;
 		}
-        if (i > 1 && ((a[i - 1] + 1) % 10) != a[i]){
-            allConsecutive = false;
-        }
+		if (i > 1 && ((a[i - 1] + 1) % 10) != a[i]) {
+			allConsecutive = false;
+		}
 	}
-    if(allSame || allConsecutive){
-        cout << "Weak\n";
-    } else {
-        cout << "Strong\n";
-    }
+	if (allSame || allConsecutive) {
+		cout << "Weak\n";
+	} else {
+		cout << "Strong\n";
+	}
 }
 
 int main() {

@@ -2,14 +2,11 @@
 using namespace std;
 
 void solve() {
-	long long n;
-	cin >> n;
-	long long curr = 1, k = 0;
-	while (curr <= n) {
-		curr <<= 1;
-		k++;
-	}
-	cout << k - 1 << '\n';
+	string s;
+	int i1, i2;
+	cin >> s >> i1 >> i2;
+	swap(s[i1 - 1], s[i2 - 1]);
+	cout << s << '\n';
 }
 
 int main() {

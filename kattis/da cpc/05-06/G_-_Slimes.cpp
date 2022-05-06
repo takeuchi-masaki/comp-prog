@@ -2,14 +2,14 @@
 using namespace std;
 
 void solve() {
-	long long n;
-	cin >> n;
-	long long curr = 1, k = 0;
-	while (curr <= n) {
-		curr <<= 1;
-		k++;
+	long long init, mult, need;
+	cin >> init >> need >> mult;
+	int ans = 0;
+	while (init < need) {
+		init *= mult;
+		ans++;
 	}
-	cout << k - 1 << '\n';
+	cout << ans << '\n';
 }
 
 int main() {
