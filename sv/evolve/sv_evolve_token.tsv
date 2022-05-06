@@ -1,0 +1,17 @@
+Fairy	t03	Forest	Follower / Token	1	1/1	Fairy	-
+Fairy Wisp	t02	Forest	Follower / Token	0	1/1	Fairy	-
+Thorn Burst	t01	Forest	Spell / Token	2	-	Plantfolk	Choose an enemy leader or enemy follower. Deal 3 damage to it. Draw a card.
+Knight	t04	Sword	Follower / Token	1	1/1	Officer	-
+Otohime's Bodyguard	t05	Sword	Follower / Token	1	1/2	Officer	[Ward]
+Steelclad Knight	t06	Sword	Follower / Token	2	2/2	Officer	-
+Viking	t07	Sword	Follower / Token	3	3/2	Thief	[Storm]
+Guardform Golem	t08	Rune	Follower / Token	2	2/3	Golem	[Ward] (When it comes into play or during your end phase, you can Act this card. Your opponent cannot attack anything other than followers with [Ward] in the Act state.)
+Magic Sediment	t09	Rune	Amulet / Token	1	-	Earth Sigil	[Stack] (Amulets with [Stack] enter play with 1 Stack counter attached and have the following effects) When this card leaves play, detach a Stack counter from this card instead. When this card has 0 Stack counters, destroy this card. Main Phase: [Act this card]: Choose another allied amulet with [Stack]. Move all of this card's Stack counters to that card.
+Strikeform Golem	t10	Rune	Follower / Token	2	3/2	Golem	[Rush] (Followers with [Rush] can attack enemy followers from the turn they come into play.)
+Dragon	t11	Dragon	Follower / Token	4	5/5	Dragon	-
+Coco	t13	Nightmare	Spell / Token	0	-	Demon World	Choose an allied follower. Give it +2 attack.
+Forest Bat	t15	Nightmare	Follower / Token	1	1/1	Vampire	-
+Ghost	t14	Nightmare	Follower / Token	1	1/1	Deceased	[Storm] (Followers with [Storm] can attack from the turn they come into play.) At the start of your end phase, banish this follower.
+Mimi	t12	Nightmare	Spell / Token	0	-	Demon World	Choose an enemy follower. Deal 2 damage to it.
+Holy Falcon	t16	Haven	Follower / Token	3	2/2	Bird	[Storm] (Followers with [Storm] can attack from the turn they come into play.)
+Holyflame Tiger	t17	Haven	Follower / Token	4	4/4	Beast	[Rush] (Followers with [Rush] can attack enemy followers from the turn they come into play.)

@@ -1,0 +1,180 @@
+Rose Queen	BP01-001	Forest	Follower	8	7/7	Plantfolk	LG	Fanfare: Choose any number of followers with the <Fairy> trait in your EX Area. Transform them into Thorn Bursts.  Main Phase: [Act this card]: Recover X play points. X equals the number of Thorn Bursts in your EX Area.    [Thorn Bursts are 2pp Forest <Plantfolk> spells with "Choose an enemy leader or enemy follower. Deal 3 damage to it. Draw a card."]
+Ancient Elf	BP01-002	Forest	Follower	2	2/2	Elf	LG	Evolve (1): Evolve this follower.  [Ward]  Fanfare: [Return another card in play to the hand]: Gain +1/+1. (Token cards that are returned to the hand are removed from the game)
+Ancient Elf (Evolved)	BP01-003	Forest	Follower / Evolve	-	3/3	Elf	LG	[Ward]  Evolve: [Return another card in play to the hand]: Gain +1/+1.
+Rhinoceroach	BP01-004	Forest	Follower	2	1/1	Insect	GR	Evolve (0): Evolve this follower.  [Rush]  Fanfare: Gain +X attack. X equals the number of other cards played this turn.
+Rhinoceroach (Evolved)	BP01-005	Forest	Follower / Evolve	-	1/1	Insect	GR	Evolve: Choose one of the following: [1] Gain [Storm]. [2] Choose an enemy follower. Deal X damage to it. X equals this follower's attack.
+Robin Hood	BP01-006	Forest	Follower	5	4/5	Hunter	GR	Fanfare: Choose an enemy follower. Deal 4 damage to it.  Main Phase: [Pay 1pp & Act this card]: Choose an enemy follower. Deal 4 damage to it.
+Silver Bolt	BP01-007	Forest	Spell	7	-	Elf	GR	[Quick]  Choose an enemy leader or enemy follower. Draw a card. Deal X damage to it. X equals the number of cards in your hand.
+Homecoming	BP01-008	Forest	Spell	3	-	Elf	GR	Choose an enemy follower. That player puts it on the top or bottom of their deck. [Combo_5] Choose all enemy followers instead. (Token cards that are returned to the deck are removed from the game)
+Elven Princess Mage	BP01-009	Forest	Follower	3	3/3	Elf / Princess	SR	Evolve (1): Evolve this follower.
+Elven Princess Mage (Evolved)	BP01-010	Forest	Follower / Evolve	-	4/4	Elf / Princess	SR	Evolve: Put 2 Fairy Wisps into your EX Area.    [Fairy Wisps are 0pp 1/1 Forest <Fairy> followers.]
+Blessed Fairy Dancer	BP01-011	Forest	Follower	2	2/3	Fairy	SR	Fanfare: Give all other allied <Fairy> followers and all <Fairy> followers in your EX Area +1/+1.
+Elf Child May	BP01-012	Forest	Follower	1	1/1	Elf	SR	When this card is returned to your hand from play, choose an enemy follower. Deal 1 damage to it.   Fanfare: Choose an enemy follower. Deal 1 damage to it.
+Fairy Beast	BP01-013	Forest	Follower	5	5/5	Fairy / Beast	SR	Main Phase: [Banish a <Fairy> follower from your EX Area]: Add 3 to your leader's defense. Draw a card. This ability can only be used once per turn.
+Noble Fairy	BP01-014	Forest	Follower	3	3/3	Fairy / Princess	SR	[Ward]  Fanfare: [Combo_3] Choose an enemy follower. Destroy it. Your opponent summons a Fairy.    [Fairies are 1pp 1/1 Forest <Fairy> followers.]
+Nature's Guidance	BP01-015	Forest	Spell	1	-	Fairy	SR	Choose an allied card in play. Return it to your hand. Draw a card. (Token cards that are returned to the hand are removed from the game)
+Harvest Festival	BP01-016	Forest	Amulet	1	-	Elf	SR	When this amulet leaves play, draw a card.  Main Phase: [Pay 1pp & Act this card & Put it into your graveyard]: Add 1 to your leader's defense.
+Elf Metallurgist	BP01-017	Forest	Follower	2	3/2	Elf	BR	Fanfare: Choose an enemy follower. Deal 1 damage to it. [Combo_3] Deal 3 damage instead.
+Archer	BP01-018	Forest	Follower	2	1/4	Hunter	BR	Evolve (1): Evolve this follower.  Whenever another allied follower comes into play, choose an enemy follower. Deal 1 damage to it.
+Archer (Evolved)	BP01-019	Forest	Follower / Evolve	-	1/4	Hunter	BR	Whenever another allied follower comes into play, choose up to 2 enemy followers. Deal 1 damage to them.
+Fairy Whisperer	BP01-020	Forest	Follower	2	1/1	Elf	BR	Fanfare: Summon a Fairy. Put a Fairy into your EX Area.    [Fairies are 1pp 1/1 Forest <Fairy> followers.]
+Okami	BP01-021	Forest	Follower	4	5/5	Beast	BR	Whenever another allied follower comes into play, gain +1/+1.
+Mana Elk	BP01-022	Forest	Follower	4	5/5	Beast	BR	Whenever an allied <Fairy> follower attacks, choose an enemy leader or enemy follower. Deal 1 damage to it.
+Fairy Circle	BP01-023	Forest	Spell	1	-	Fairy	BR	Put 3 Fairies into your EX area.    [Fairies are 1pp 1/1 Forest <Fairy> followers.]
+Woodkin Curse	BP01-024	Forest	Spell	2	-	Spirit	BR	[Quick]  Choose an enemy follower. It does not deal damage this turn.
+Woodland Refuge	BP01-025	Forest	Amulet	1	-	Spirit	BR	Fanfare: Choose an allied <Fairy> follower. Give it +1 attack.  Main Phase: [Pay 1pp & Act this card]: Return this card to your hand.
+Sea Queen Otohime	BP01-026	Sword	Follower	4	3/4	Commander / Princess	LG	Evolve (2): Evolve this follower.  Fanfare: Summon an Otohime's Bodyguard.    [Otohime's Bodyguards are 1pp 1/2 Sword <Officer> followers with [Ward].]
+Sea Queen Otohime (Evolved)	BP01-027	Sword	Follower / Evolve	-	4/5	Commander / Princess	LG	Evolve: Summon 3 Otohime's Bodyguards until your board is full. Put the remaining that were not summoned into your EX Area.
+Aurelia, Regal Saber	BP01-028	Sword	Follower	5	4/6	Commander / Princess	LG	[Rush] [Direct Attack] [Ward]  Fanfare: Choose an enemy leader. If that enemy has at least 3 cards in play, gain +2/+2 and [Aura].
+Shadowed Assassin	BP01-029	Sword	Follower	4	4/4	Assassin	GR	Evolve (2): Evolve this follower.  Fanfare: Choose an enemy follower. Act it.
+Shadowed Assassin (Evolved)	BP01-030	Sword	Follower / Evolve	-	5/5	Assassin	GR	Evolve: Choose an enemy follower in the Act state. Destroy it.
+Frontguard General	BP01-031	Sword	Follower	7	6/8	Commander	GR	[Ward]  Last Words: Summon 2 Steelclad Knights. Give them [Ward]. You may Act any number of them.    [Steelclad Knights are 2pp 2/2 Sword <Officer> followers.]
+Alwida's Command	BP01-032	Sword	Spell	5	-	Thief	GR	Summon a Viking, a Steelclad Knight and a Knight.    [Vikings are 3pp 3/2 Sword <Thief> followers with [Storm].]  [Steelclad Knights are 2pp 2/2 Sword <Officer> followers.]  [Knights are 1pp 1/1 Sword <Officer> followers.]
+Royal Banner	BP01-033	Sword	Amulet	4	-	Commander	GR	Whenever an allied Swordcraft follower comes into play, give it +1/+1.  Fanfare: Give +1/+1 to all allied Swordcraft followers.
+Maid Leader	BP01-034	Sword	Follower	1	1/1	Officer / Maid	SR	Evolve (2): Evolve this follower.
+Maid Leader (Evolved)	BP01-035	Sword	Follower / Evolve	-	2/2	Officer / Maid	SR	Evolve: Search your deck for a follower with Evolve and add it to your hand.
+Gemstaff Commander	BP01-036	Sword	Follower	3	3/2	Commander	SR	Fanfare: Search your deck for a Swordcraft follower and add it to your hand.
+Sage Commander	BP01-037	Sword	Follower	5	5/5	Commander	SR	Fanfare: Give all other allied followers +1/+1.
+Swordsman	BP01-038	Sword	Follower	1	2/1	Officer	SR	Fanfare: Choose an enemy follower. Act it.  Main Phase: [Act this card] : Choose an enemy follower. Act it.
+Pompous Princess	BP01-039	Sword	Follower	3	3/3	Commander / Princess	SR	Fanfare: Look at 5 cards from the top of your deck. You may put a follower that costs 1 play point from among them into play. Put the rest on the bottom of your deck in any order.
+Ninja Master	BP01-040	Sword	Follower	4	4/4	Officer / Ninja	SR	Fanfare: Search your deck for a <Ninja> card and add it to your hand.
+Arthurian Light	BP01-041	Sword	Amulet	2	-	Commander	SR	Main Phase: [Pay 1pp & Act this card]: Summon a Knight. Give it [Storm].  Main Phase: [Pay 2pp & Act this card]: Choose an enemy follower. Act it.  Main Phase: [Pay 3pp & Act this card]: Draw a card.    [Knights are 1pp 1/1 Sword <Officer> followers.]
+Ninja Trainee	BP01-042	Sword	Follower	1	2/2	Officer / Ninja	BR	-
+Fervid Soldier	BP01-043	Sword	Follower	2	2/2	Officer	BR	Evolve (2): Evolve this follower.  Whenever another allied follower comes into play, gain +1 attack.
+Fervid Soldier (Evolved)	BP01-044	Sword	Follower / Evolve	-	4/4	Officer	BR	Whenever another allied follower comes into play, gain +1 attack.
+Luminous Knight	BP01-045	Sword	Follower	2	3/1	Commander	BR	Fanfare: Choose another allied follower. Give it +1 attack.  Last Words: Choose an allied follower. Give it +1 attack.
+Veteran Lancer	BP01-046	Sword	Follower	2	2/3	Officer	BR	[Ward]
+Navy Lieutenant	BP01-047	Sword	Follower	2	2/3	Commander	BR	Fanfare: Choose another allied follower. Give it [Direct Attack].
+Novice Trooper	BP01-048	Sword	Follower	3	3/3	Officer	BR	[Storm]
+Forge Weaponry	BP01-049	Sword	Spell	2	-	Officer	BR	[Quick]  Choose an allied follower. Give it +1/+1. Draw a card.
+Onslaught	BP01-050	Sword	Spell	3	-	Officer	BR	Choose an enemy follower. Deal 5 damage to it. Put a Knight into your EX area.    [Knights are 1pp 1/1 Sword <Officer> followers.]
+Arch Summoner Erasmus	BP01-051	Rune	Follower	7	6/8	Sorcerer	LG	Fanfare: [Earth Rite] Choose an enemy follower. Deal 6 damage to it. Deal 2 damage to that enemy's leader.  Main Phase: [Act this follower & Earth Rite]: Choose an enemy follower. Deal 6 damage to it. Deal 2 damage to that enemy's leader.
+Merlin	BP01-052	Rune	Follower	3	3/2	Sorcerer	LG	Evolve (2): Evolve this follower.  Fanfare: Search your deck for a spell and add it to your hand.
+Merlin (Evolved)	BP01-053	Rune	Follower / Evolve	-	4/3	Sorcerer	LG	Evolve: Choose a spell that costs 3 play points or less from your graveyard. Play it for 0 play points.
+Ancient Alchemist	BP01-054	Rune	Follower	3	2/5	Alchemist	GR	Evolve (3): Evolve this follower.  Fanfare: [Earth Rite] Put 2 Guardform Golems into your EX Area.    [Guardform Golem are 2pp 2/3 Rune <Golem> followers with [Ward].]
+Ancient Alchemist (Evolved)	BP01-055	Rune	Follower / Evolve	3	3/6	Alchemist	GR	While this follower is in play, subtract 1 from the cost of playing your <Golem> followers.  Whenever an allied <Golem> follower comes into play, choose an enemy leader or enemy follower. Deal 3 damage to it.
+Arcane Enlightenment	BP01-056	Rune	Spell	4	-	Sorcerer	GR	[Quick]  Put the top card of your deck into your EX Area. Do this until your EX Area is full. At the start of your next end phase, banish all cards in your EX Area.
+Dimension Shift	BP01-057	Rune	Spell	12	-	Sorcerer	GR	When you would play this spell, banish 10 spells from your graveyard: change it's cost to 7.  Take an extra turn after this one.
+Juno's Secret Laboratory	BP01-058	Rune	Amulet	5	-	Alchemist	GR	Fanfare: Summon a Guardform Golem or a Strikeform Golem.  Main Phase: [Act this card]: Summon a Magic Sediment.  Main Phase: [Act this card & Earth Rite]: Summon a Guardform Golem or Strikeform Golem.
+Spectral Wizard	BP01-059	Rune	Follower	2	2/2	Sorcerer	SR	Evolve (2) : Evolve this follower.  Fanfare: Look at the top card of your deck. You may reveal a spell from among them and add it to your hand.
+Spectral Wizard (Evolved)	BP01-060	Rune	Follower / Evolve	-	3/3	Sorcerer	SR	Evolve: [Discard a spell from your hand]: Choose an enemy follower. Deal 4 damage to it.
+Flame Destroyer	BP01-061	Rune	Follower	9	7/7	Magical Creature	SR	When you would play this follower, [Spellchain_5] Subtract 3 from its cost. [SC10] Subtract 6 instead. [SC15] Subtract 9 instead.  [Rush]
+Dragonbond Mage	BP01-062	Rune	Follower	3	3/4	Sorcerer	SR	Whenever you play a spell, attach a Spell counter to this follower.  Main Phase: [Detach 3 Spell counters from this follower]: Choose an enemy follower. Deal 5 damage to it
+Golem Protection	BP01-063	Rune	Spell	4	-	Alchemist	SR	Summon 2 Guardform Golems.  [Earth Rite]: Give all allied <Golem> followers +1/+1.    [Guardform Golems are 2pp 2/3 Rune <Golem> followers with [Ward].]
+Alchemical Lore	BP01-064	Rune	Spell	5	-	Sorcerer	SR	Deal 4 damage to all enemy followers.
+Fate's Hand	BP01-065	Rune	Spell	3	-	Sorcerer	SR	[Quick]  Draw 2 cards. [Spellchain_10] Recover 1 play point.
+Price of Magic	BP01-066	Rune	Amulet	3	-	Earth Sigil	SR	[Stack]  Fanfare: Choose an enemy follower with 4 or less defense. Banish it.
+Runic Guardian	BP01-067	Rune	Follower	3	3/4	Alchemist	BR	[Ward]  Fanfare: Choose one of the following: [1] [Earth Rite] Gain +1/+2. [2] Summon a Magic Sediment.    [Magic Sediments are 1pp Rune <Earth Sigil> Amulets with [Stack].]
+Crafty Warlock	BP01-068	Rune	Follower	2	2/2	Alchemist	BR	Evolve (1): Evolve this follower.  Last Words: Summon a Magic Sediment.    [Magic Sediments are 1pp Rune <Earth Sigil> Amulets with [Stack].]
+Crafty Warlock (Evolved)	BP01-069	Rune	Follower / Evolve	-	3/3	Alchemist	BR	Last Words: Summon a Magic Sediment. Add 1 to an allied [Stack] in play.
+Lightning Shooter	BP01-070	Rune	Follower	4	3/3	Sorcerer	BR	Fanfare: Choose an enemy follower. Deal 2 damage to it. [Spellchain_5] Deal 4 damage instead. [SC_10] Deal 2 damage to that enemy's leader.
+Wind Blast	BP01-071	Rune	Spell	1	-	Sorcerer	BR	Choose an enemy follower. Deal 2 damage to it. [Spellchain_10] Deal 4 damage instead.
+Sorcery Cache	BP01-072	Rune	Spell	2	-	Sorcerer	BR	[Quick]  Look at 4 cards from the top of your deck. You may reveal a spell from among them and add it to your hand. You may put a spell from among them into your graveyard. Put the rest on the bottom of your deck in any order.
+Fiery Embrace	BP01-073	Rune	Spell	4	-	Sorcerer	BR	[Quick]  Choose an enemy follower. Destroy it. [Spellchain_10] Deal 3 damage to that enemy's leader.
+Alchemist's Workshop	BP01-074	Rune	Amulet	2	-	Earth Sigil	BR	[Stack]  Fanfare: Summon a Strikeform Golem.    [Strikeform Golems are 2pp 3/2 Rune <Golem> followers with [Rush].]
+Teachings of Creation	BP01-075	Rune	Amulet	1	-	Earth Sigil	BR	[Stack]  Fanfare: Draw a card.
+Dark Dragoon Forte	BP01-076	Dragon	Follower	4	5/1	Dragon Rider	LG	Evolve (2): Evolve this follower.  [Storm]
+Dark Dragoon Forte (Evolved)	BP01-077	Dragon	Follower / Evolve	-	7/3	Dragon Rider	LG	[Storm] [Aura]
+Zirnitra	BP01-078	Dragon	Follower	3	3/2	Dragonewt	LG	Fanfare: Put a Dragon into your EX area.  Main Phase: [Pay 2pp & Act this card]: Choose a Dragon in your EX area. Summon it. Give it [Rush]. If [Overflow] is active for you, recover 2 play points.    [Dragons are 4pp 5/5 Dragon <Dragon> followers.]
+Aiela, Dragon Knight	BP01-079	Dragon	Follower	3	3/2	Dragon Rider	GR	[Direct Attack]  Last Words: Gain an empty play point orb.
+Genesis Dragon	BP01-080	Dragon	Follower	9	10/12	Dragon	GR	[Storm]
+Shapeshifting Mage	BP01-081	Dragon	Follower	2	2/2	Dragonewt	GR	Evolve (1): Evolve this follower.  Fanfare: If [Overflow] is active for you, gain +3/+3.
+Shapeshifting Mage (Evolved)	BP01-082	Dragon	Follower / Evolve	-	2/2	Dragonewt	GR	[Direct Attack] [Bane]
+Phoenix Roost	BP01-083	Dragon	Amulet	5	-	Phoenix	GR	At the start of each player's main phase, they look at the top card of their deck. They may summon a follower from among them.
+Wyvern Cavalier	BP01-084	Dragon	Follower	5	5/5	Dragon Rider	GR	Fanfare: Put the top card of your deck into your EX Area. When you would play that card, subtract 2 from its cost.
+Dragonewt Scholar	BP01-085	Dragon	Follower	2	2/2	Dragonewt	SR	[Intimidate]  Strike: Draw a card. Discard a card from your hand.
+Shenlong	BP01-086	Dragon	Follower	5	4/5	Dragon	SR	Evolve (2) : Evolve this follower.  [Ward]  Fanfare: Draw 2 cards. Discard a card from your hand.
+Shenlong (Evolved)	BP01-087	Dragon	Follower / Evolve	-	5/6	Dragon	SR	[Ward]  Evolve: Add 5 to your leader's defense.
+Imprisoned Dragon	BP01-088	Dragon	Follower	3	4/4	Dragon	SR	[Ward]  Can't attack enemies.
+Conflagration	BP01-089	Dragon	Spell	5	-	Dragon	SR	Deal 5 damage to all followers.
+Serpent Wrath	BP01-090	Dragon	Spell	3	-	Dragon	SR	[Quick]  Choose an enemy follower. Deal 5 damage to it. If [Overflow] is active for you, draw a card.
+Wrym Spire	BP01-091	Dragon	Amulet	6	-	Dragonewt	SR	While this amulet is in play, all allied Dragons have [Rush].  Main Phase: [Act this card]: Choose a follower. Destroy it. That follower's player summons a Dragon.    [Dragons are 4pp 5/5 Dragon <Dragon> followers.]
+Ivory Dragon	BP01-092	Dragon	Follower	1	1/1	Dragon	BR	Evolve (0): Evolve this follower.
+Ivory Dragon (Evolved)	BP01-093	Dragon	Follower/Evolve	-	2/2	Dragon	BR	Evolve: If [Overflow] is active for you, draw a card.
+Fire Lizard	BP01-094	Dragon	Follower	2	3/2	Dragon	BR	Fanfare: Choose an enemy leader or enemy follower. Deal 1 damage to it.
+Ace Dragoon	BP01-095	Dragon	Follower	2	0/2	Dragon Rider	BR	[Rush]  Fanfare: Choose another follower. Gain +X attack. X equals the chosen follower's attack.
+Mist Dragon	BP01-096	Dragon	Follower	4	4/4	Dragon	BR	[Intimidate]
+Dread Dragon	BP01-097	Dragon	Follower	7	7/7	Dragon	BR	Fanfare: Choose an enemy follower. Deal 7 damage to it.
+Blazing Breath	BP01-098	Dragon	Spell	1	-	Dragon	BR	[Quick]  Choose an enemy follower. Deal 2 damage to it. If [Overflow] is active for you, deal 4 damage instead.
+Dragon Wings	BP01-099	Dragon	Spell	3	-	Dragon	BR	Deal 2 damage to all followers. If [Overflow] is active for you, deal 3 damage instead.
+Dragon Emissary	BP01-100	Dragon	Spell	1	-	Dragon	BR	Look at 5 cards from the top of your deck. You may reveal a Dragoncraft card that costs at least 5 play points from among them and add it to your hand. Put the rest on the bottom of your deck in any order.
+Cerberus	BP01-101	Nightmare	Follower	4	3/3	Demon World	LG	Evolve (2): Evolve this follower.  Fanfare: Put a Mimi or a Coco into your EX Area. [Necrocharge_10] Put 1 of each instead.    [Mimis are 0pp Nightmare <Demon World> spells with "Choose an enemy follower. Deal 2 damage to it."]  [Cocos are 0pp Nightmare <Demon World> spells with "Choose an allied follower. Give it +2 attack."]
+Cerberus (Evolved)	BP01-102	Nightmare	Follower / Evolve	-	5/5	Demon World	LG	Evolve: Put a Mimi and a Coco into your EX Area.
+Lord Atomy	BP01-103	Nightmare	Follower	9	6/6	Deceased	LG	When you would play this follower, either put 4 Nightmarecraft cards in the Stand state in play into your graveyard or banish 4 Nightmarecraft cards in your EX Area: subtract 9 from its cost.
+Medusa	BP01-104	Nightmare	Follower	6	6/6	Demon World	GR	When you would play this follower, if [Crimson] is active for you, subtract 1 from its cost.  When you would play this follower, [Necrocharge_10] Subtract 1 from its cost.  [Bane]  Main Phase: [Act this card]: Choose an enemy follower. Destroy it.
+Righteous Devil	BP01-105	Nightmare	Follower	4	2/4	Demon World	GR	Evolve (Subtract 3 from your leader's defense): Evolve this follower.  [Bane]
+Righteous Devil (Evolved)	BP01-106	Nightmare	Follower / Evolve	-	3/5	Demon World	GR	[Direct Attack] [Bane]  Whenever an enemy follower is destroyed, deal 1 damage to that enemy's leader. Add 1 to your leader's defense.
+Mordecai the Duelist	BP01-107	Nightmare	Follower	5	5/5	Deceased	GR	Last Words: [Subtract 3 from your leader's defense]: Summon this follower.
+Dire Bond	BP01-108	Nightmare	Amulet	1	-	Demon World	GR	Fanfare: Deal 1 damage to your leader. Draw a card.  Main Phase: [Pay 2pp & Act this card & Put it into your graveyard]: Deal 1 damage to your leader. Draw a card.
+Hell's Unleasher	BP01-109	Nightmare	Follower	2	2/2	Demon World	SR	Main Phase: [Act this card & Put it into your graveyard]: Choose a follower that costs at least 3 play points from your graveyard. Add it to your hand.
+Crazed Executioner	BP01-110	Nightmare	Follower	3	3/3	Killer	SR	Evolve (1): Evolve this follower.
+Crazed Executioner (Evolved)	BP01-111	Nightmare	Follower / Evolve	-	3/3	Killer	SR	Evolve: Deal 2 damage to your leader. Reveal an enemy's hand. Choose a card from among them. Your opponent discards it.
+Dark Summoner	BP01-112	Nightmare	Follower	2	3/2	Demon World	SR	Fanfare: If [Crimson] is active for you, gain +1/+1 and [Rush].
+Dark General	BP01-113	Nightmare	Follower	4	5/5	Demon World	SR	Fanfare: If [Crimson] is active for you, gain [Storm].
+Phantom Howl	BP01-114	Nightmare	Spell	3	-	Deceased	SR	Summon 4 Ghosts.    [Ghosts are 1pp 1/1 Nightmare <Deceased> followers with [Storm] and banish during your end phase.]
+Death's Breath	BP01-115	Nightmare	Spell	6	-	Deceased	SR	Choose a follower that costs 8 play points or less from your graveyard. Summon it. Give it [Ward].
+Soul Conversion	BP01-116	Nightmare	Spell	1	-	Deceased	SR	[Quick]  Choose an allied follower. Destroy it. Draw 2 cards
+Skeleton Fighter	BP01-117	Nightmare	Follower	1	2/2	Deceased	BR	Fanfare: If [Crimson] is active for you, gain +1/+1.
+Ambling Wraith	BP01-118	Nightmare	Follower	1	2/1	Deceased	BR	Fanfare: Deal 1 damage to all leaders.
+Spectre	BP01-119	Nightmare	Follower	2	2/1	Deceased	BR	[Bane]  Fanfare: [Subtract 2 from your leader's defense]: Gain [Rush]. Put the top card of your deck into your graveyard.
+Spartoi Sergeant	BP01-120	Nightmare	Follower	2	2/3	Deceased	BR	Fanfare: Put 2 cards from the top of your deck into your graveyard.
+Rabbit Necromancer	BP01-121	Nightmare	Follower	3	3/3	Necromancer	BR	Last Words: Deal 2 damage to all leaders.
+Wardrobe Raider	BP01-122	Nightmare	Follower	3	3/3	Demon World	BR	Evolve (0) : Evolve this follower
+Wardrobe Raider (Evolved)	BP01-123	Nightmare	Follower / Evolve	-	3/3	Demon World	BR	Evolve: [Put a follower into the graveyard]: Choose an enemy follower. Destroy it.   <<This effect is still ambiguous>>
+Undead King	BP01-124	Nightmare	Follower	6	6/6	Deceased	BR	Fanfare: Choose up to 2 followers in your graveyard. Add them to your hand.
+Razory Claw	BP01-125	Nightmare	Spell	2	-	Demon World	BR	[Quick]  Deal 2 damage to your leader. Choose an enemy leader or enemy follower. Deal 3 damage to it.
+Moon Al-mi'raj	BP01-126	Haven	Follower	5	4/5	Beast	LG	[Storm]  Follower Strike: Gain +2 attack.  At the start of your end phase, gain +2 defense.
+Jeanne d'Arc	BP01-127	Haven	Follower	4	3/4	Leader	LG	Evolve (2): Evolve this follower.  Fanfare: Deal 2 damage to all enemy followers.
+Jeanne d'Arc (Evolved)	BP01-128	Haven	Follower / Evolve	-	4/5	Leader	LG	Evolve: Deal 2 damage to all enemy followers. Give all other allied followers +2 defense.
+Arch Priestess Laelia	BP01-129	Haven	Follower	4	0/6	Faith	GR	Evolve (1): Evolve this follower.  While this follower is in play, allied followers deal damage equal to their defense instead of their attack.
+Arch Priestess Laelia (Evolved)	BP01-130	Haven	Follower / Evolve	-	0/6	Faith	GR	While this follower is in play, allied followers deal damage equal to their defense instead of their attack.  At the start of your end phase, gain +2 defense.
+Themis's Decree	BP01-131	Haven	Spell	5	-	Faith	GR	Destroy all followers.
+Chorus of Prayer	BP01-132	Haven	Spell	7	-	Faith	GR	Choose up to three amulets that cost 5 play points or less from your graveyard. Summon them.
+Sacred Plea	BP01-133	Haven	Amulet	1	-	Faith	GR	Main Phase: [Act this card & Put it into your graveyard]: Draw a card.  Main Phase: [Pay 2pp & Act this card & Put it into your graveyard]: Draw 2 cards.
+Temple Defender	BP01-134	Haven	Follower	3	3/3	Faith	SR	[Ward]  Subtract 1 from damage taken by this follower.
+Prism Priestess	BP01-135	Haven	Follower	1	1/1	Faith	SR	Evolve (2): Evolve this follower.
+Prism Priestess (Evolved)	BP01-136	Haven	Follower / Evolve	-	2/2	Faith	SR	Evolve: Search your deck for an amulet and add it to your hand.
+Cleric Lancer	BP01-137	Haven	Follower	4	1/5	Faith	SR	[Ward]  During your opponent's turn, this follower deals +4 damage.
+Shrine Knight Maiden	BP01-138	Haven	Follower	5	5/5	Faith	SR	[Ward] [Aura]
+Blackened Scripture	BP01-139	Haven	Spell	2	-	Zealotry	SR	[Quick]  Choose an enemy follower with 3 or less defense. Banish it.
+Dark Offering	BP01-140	Haven	Spell	1	-	Zealotry	SR	[Quick]  Choose an allied card in play. Destroy it. Add 3 to your leader's defense. Draw a card.
+Holy Sentinel	BP01-141	Haven	Amulet	5	-	Faith / Beast	SR	Once during each of your turns, when another allied amulet leaves play, summon a Holyflame Tiger. Give it [Ward].    [Holyflame Tigers are 4pp 4/4 Haven <Beast> followers with [Rush].]
+Cruel Priestess	BP01-142	Haven	Follower	4	3/3	Zealotry	BR	Fanfare: Choose an amulet that costs 5 play points or less from your graveyard. Put it into play.
+Sister Initiate	BP01-143	Haven	Follower	2	3/2	Faith	BR	Fanfare: If any allied amulets are in play, add 2 to your leader's defense.
+Mainyu	BP01-144	Haven	Follower	2	2/2	Zealotry	BR	Evolve (1): Evolve this follower.  [Aura]
+Mainyu (Evolved)	BP01-145	Haven	Follower/Evolve	-	3/3	Zealotry	BR	[Aura]
+Snake Priestess	BP01-146	Haven	Follower	1	1/3	Zealotry	BR	[Ward]
+Curate	BP01-147	Haven	Follower	6	5/5	Faith	BR	Fanfare: Add 5 to your leader's defense. Draw a card.
+Hallowed Dogma	BP01-148	Haven	Spell	1	-	Faith	BR	[Quick]  Look at 5 cards from the top of your deck. You may reveal an amulet from among them and add it to your hand. Put the rest on the bottom of your deck in any order.
+Guardian Sun	BP01-149	Haven	Amulet	1	-	Faith	BR	Fanfare: Choose an allied follower. Give it [Ward].  Main Phase: [Pay 2pp & Act this card & Put it into your graveyard]: Choose an allied follower with [Ward]. Give it +2/+2
+Death Sentence	BP01-150	Haven	Amulet	3	-	Zealotry	BR	This card comes into play in the Act state.  Main Phase: [Act this card & Put it into your graveyard]: Choose an enemy follower. Destroy it.
+Gabriel	BP01-151	Neutral	Follower	6	4/3	Angel	LG	[Ward]  Fanfare: Choose another allied follower. Give it +4/+3 and [Direct Attack].
+Lucifer	BP01-152	Neutral	Follower	7	6/7	Angel / Fallen Angel	LG	Evolve (0): Evolve this follower.  [Ward]  At the start of your end phase, add 4 to your leader's defense.
+Lucifer (Evolved)	BP01-153	Neutral	Follower / Evolve	-	8/7	Angel / Fallen Angel	LG	[Bane]  At the start of your end phase, deal 4 damage to all enemy leaders.
+Flame and Glass	BP01-154	Neutral	Follower	10	7/7	Demon King	LG	[Storm]  Strike: Deal 3 damage to all enemy followers. If both Harnessed Flame and Harnessed Glass are in your graveyard, deal 7 damage instead.
+Urd	BP01-155	Neutral	Follower	4	2/2	Divinity	GR	Evolve (1): Evolve this follower.  Fanfare: Choose an enemy follower. Put it into the EX Area. (Evolve followers put into the EX Area are removed from the game)
+Urd (Evolved)	BP01-156	Neutral	Follower / Evolve	-	3/3	Divinity	GR	Evolve: Choose a card in your opponent's EX Area. Banish it.
+Wind God	BP01-157	Neutral	Follower	4	1/5	Divinity	GR	At the start of your end phase, give all allied followers +1 attack.  Fanfare: Choose an allied follower. Give it +1 attack.
+Gilgamesh	BP01-158	Neutral	Follower	7	6/6	Divinity	GR	[Storm]
+Bellringer Angel	BP01-159	Neutral	Follower	1	0/2	Angel	GR	Evolve (2): Evolve this follower.  [Ward]  Last Words: Draw a card.
+Bellringer Angel (Evolved)	BP01-160	Neutral	Follower / Evolve	-	0/2	Angel	GR	[Ward]  Evolve: Choose an enemy follower. Deal 2 damage to it.  Last Words: Draw a card.
+Altered Fate	BP01-161	Neutral	Spell	2	-	Divinity	GR	All players return all cards in their hand to their deck, shuffles it, and draws the same number of cards as they returned. Then, you draw a card.
+Path to Purgatory	BP01-162	Neutral	Amulet	3	-	Demon King	GR	At the start of your end phase, if your leader's defense is 6 or less, [Act this card & Put it into your graveyard]: Deal 6 damage to all enemy followers.  Fanfare: Draw 3 cards. Deal 3 damage to your leader.
+Lizardman	BP01-163	Neutral	Follower	3	4/3	Mercenary	SR	[Direct attack]
+Goblinmount Demon	BP01-164	Neutral	Follower	5	6/6	Goblin	SR	Evolve (0): Evolve this follower.  [Ward]  Fanfare: Deal 2 damage to all other allied followers.
+Goblinmount Demon (Evolved)	BP01-165	Neutral	Follower / Evolve	-	7/7	Goblin	SR	[Ward]
+Harnessed Flame	BP01-166	Neutral	Follower	3	3/2	Demon	SR	Main Phase: [Pay 1pp & Put this follower and an allied Harnessed Glass into your graveyard]: Search your deck for a Flame and Glass and summon it.
+Harnessed Glass	BP01-167	Neutral	Follower	3	2/3	Demon	SR	Fanfare: Draw a card. Put a card from your hand on the bottom of your deck.
+Demonic Strike	BP01-168	Neutral	Spell	3	-	Demon	SR	Choose an enemy leader or enemy follower. Deal 3 damage to it.
+Execution	BP01-169	Neutral	Spell	4	-	Demon	SR	[Quick]  Choose an enemy card in play. Destroy it.
+Trail of Light	BP01-170	Neutral	Spell	2	-	Splendor	SR	When this card is discarded from your hand, draw a card.  ----------  Draw a card.
+Goblin	BP01-171	Neutral	Follower	1	2/2	Goblin	BR	Evolve (4): Evolve this follower.
+Goblin (Evolved)	BP01-172	Neutral	Follower / Evolve	-	4/4	Goblin	BR	-
+Fighter	BP01-173	Neutral	Follower	2	2/3	Mercenary	BR	-
+Goliath	BP01-174	Neutral	Follower	3	3/4	Giant	BR	Evolve (2): Evolve this follower.
+Goliath (Evolved)	BP01-175	Neutral	Evolved Follower	-	5/6	Giant	BR	-
+Angelic Sword Maiden	BP01-176	Neutral	Follower	5	4/6	Angel	BR	[Ward]
+Healing Angel	BP01-177	Neutral	Follower	3	2/4	Angel	BR	Evolve (1): Evolve this follower.  Fanfare: Add 1 to your leader's defense.
+Healing Angel (Evolved)	BP01-178	Neutral	Follower / Evolve	-	3/5	Angel	BR	Evolve: Add 2 to your leader's defense.
+Angelic Snipe	BP01-179	Neutral	Spell	1	-	Angel	BR	[Quick]  Choose an enemy follower. Deal 2 damage to it.
+Angelic Barrage	BP01-180	Neutral	Spell	1	-	Angel	BR	[Quick]  Deal 1 damage to all enemy followers.

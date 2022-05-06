@@ -1,0 +1,401 @@
+<card>
+<name>Skullfane</name>
+<text>Whenever an allied amulet leaves play, deal 2 damage to all enemy leaders and all enemy followers. Fanfare: Look at 4 cards from the top of your deck. You may put 1 amulet from among them into play. Put the rest into your graveyard.</text>
+<prop>
+<layout>normal</layout>
+<side>front</side>
+<type>Follower</type>
+<maintype>Follower</maintype>
+<manacost>7</manacost>
+<cmc>7</cmc>
+<colors>Haven</colors>
+<coloridentity>Haven</coloridentity>
+<format-standard>legal</format-standard>
+<pt>6/6</pt>
+</prop>
+<set rarity="LG" num="001" uuid="001" muid="001" picurl="https://shadowverse-evolve.com/wordpress/wp-content/images/cardlist/SD06/SD06-001.png">SD06</set>
+<token>0</token>
+<tablerow>2</tablerow>
+</card>
+
+<card>
+<name>Hare of Illusions</name>
+<text>Main Phase: [Act this card and Put it into your graveyard]: Choose an enemy follower. Act it. Main Phase: [Pay 10pp and Act this card and Put it into your graveyard]: Banish all followers.</text>
+<prop>
+<layout>normal</layout>
+<side>front</side>
+<type>Amulet</type>
+<maintype>Amulet</maintype>
+<manacost>0</manacost>
+<cmc>0</cmc>
+<colors>Haven</colors>
+<coloridentity>Haven</coloridentity>
+<format-standard>legal</format-standard>
+</prop>
+<set rarity="GR" num="002" uuid="002" muid="002" picurl="https://shadowverse-evolve.com/wordpress/wp-content/images/cardlist/SD06/SD06-002.png">SD06</set>
+<token>0</token>
+<tablerow>2</tablerow>
+</card>
+
+<card>
+<name>Priest of the Cudgel</name>
+<text>Evolve (1): Evolve this follower.</text>
+<prop>
+<layout>normal</layout>
+<side>front</side>
+<type>Follower</type>
+<maintype>Follower</maintype>
+<manacost>3</manacost>
+<cmc>3</cmc>
+<colors>Haven</colors>
+<coloridentity>Haven</coloridentity>
+<format-standard>legal</format-standard>
+<pt>3/3</pt>
+</prop>
+<set rarity="SR" num="003" uuid="003" muid="003" picurl="https://shadowverse-evolve.com/wordpress/wp-content/images/cardlist/SD06/SD06-003.png">SD06</set>
+<related attach="1">Priest of the Cudgel (Evolved)</related>
+<token>0</token>
+<tablerow>2</tablerow>
+</card>
+
+<card>
+<name>Acolyte's Light</name>
+<text>[Quick] Choose an enemy follower. Banish it. Add 2 to your leader's defense.</text>
+<prop>
+<layout>normal</layout>
+<side>front</side>
+<type>Spell</type>
+<maintype>Spell</maintype>
+<manacost>4</manacost>
+<cmc>4</cmc>
+<colors>Haven</colors>
+<coloridentity>Haven</coloridentity>
+<format-standard>legal</format-standard>
+</prop>
+<set rarity="SR" num="005" uuid="005" muid="005" picurl="https://shadowverse-evolve.com/wordpress/wp-content/images/cardlist/SD06/SD06-005.png">SD06</set>
+<token>0</token>
+<tablerow>1</tablerow>
+</card>
+
+<card>
+<name>Dual Flames</name>
+<text>Fanfare: Summon a Holyflame Tiger. Main Phase: [Pay 2pp and Act this card and Put it into your graveyard]: Summon a Holyflame Tiger.   [Holyflame Tigers are 4pp 4/4 Haven Beast followers with [Rush].]</text>
+<prop>
+<layout>normal</layout>
+<side>front</side>
+<type>Amulet</type>
+<maintype>Amulet</maintype>
+<manacost>4</manacost>
+<cmc>4</cmc>
+<colors>Haven</colors>
+<coloridentity>Haven</coloridentity>
+<format-standard>legal</format-standard>
+</prop>
+<set rarity="SR" num="006" uuid="006" muid="006" picurl="https://shadowverse-evolve.com/wordpress/wp-content/images/cardlist/SD06/SD06-006.png">SD06</set>
+<related>Holyflame Tiger</related>
+<token>0</token>
+<tablerow>2</tablerow>
+</card>
+
+<card>
+<name>Cruel Priestess</name>
+<text>Fanfare: Choose an amulet that costs 5 play points or less from your graveyard. Put it into play.</text>
+<prop>
+<layout>normal</layout>
+<side>front</side>
+<type>Follower</type>
+<maintype>Follower</maintype>
+<manacost>4</manacost>
+<cmc>4</cmc>
+<colors>Haven</colors>
+<coloridentity>Haven</coloridentity>
+<format-standard>legal</format-standard>
+<pt>3/3</pt>
+</prop>
+<set rarity="BR" num="007" uuid="007" muid="007" picurl="https://shadowverse-evolve.com/wordpress/wp-content/images/cardlist/SD06/SD06-007.png">SD06</set>
+<token>0</token>
+<tablerow>2</tablerow>
+</card>
+
+<card>
+<name>Snake Priestess</name>
+<text>[Ward] (When it comes into play or during your end phase, you can Act this card. Your opponent cannot attack anything other than followers with [Ward] in the Act state.)</text>
+<prop>
+<layout>normal</layout>
+<side>front</side>
+<type>Follower</type>
+<maintype>Follower</maintype>
+<manacost>1</manacost>
+<cmc>1</cmc>
+<colors>Haven</colors>
+<coloridentity>Haven</coloridentity>
+<format-standard>legal</format-standard>
+<pt>1/3</pt>
+</prop>
+<set rarity="BR" num="008" uuid="008" muid="008" picurl="https://shadowverse-evolve.com/wordpress/wp-content/images/cardlist/SD06/SD06-008.png">SD06</set>
+<token>0</token>
+<tablerow>2</tablerow>
+</card>
+
+<card>
+<name>Ardent Nun</name>
+<text>Evolve (1): Evolve this follower. [Ward] During your opponent’s turn, this follower deals +1 damage.</text>
+<prop>
+<layout>normal</layout>
+<side>front</side>
+<type>Follower</type>
+<maintype>Follower</maintype>
+<manacost>2</manacost>
+<cmc>2</cmc>
+<colors>Haven</colors>
+<coloridentity>Haven</coloridentity>
+<format-standard>legal</format-standard>
+<pt>2/2</pt>
+</prop>
+<set rarity="BR" num="009" uuid="009" muid="009" picurl="https://shadowverse-evolve.com/wordpress/wp-content/images/cardlist/SD06/SD06-009.png">SD06</set>
+<related attach="1">Ardent Nun (Evolved)</related>
+<token>0</token>
+<tablerow>2</tablerow>
+</card>
+
+<card>
+<name>Guardian Nun</name>
+<text>Evolve (1): Evolve this follower. [Ward] Fanfare: If any allied amulets are in play, gain +1 defense.</text>
+<prop>
+<layout>normal</layout>
+<side>front</side>
+<type>Follower</type>
+<maintype>Follower</maintype>
+<manacost>3</manacost>
+<cmc>3</cmc>
+<colors>Haven</colors>
+<coloridentity>Haven</coloridentity>
+<format-standard>legal</format-standard>
+<pt>3/3</pt>
+</prop>
+<set rarity="BR" num="011" uuid="011" muid="011" picurl="https://shadowverse-evolve.com/wordpress/wp-content/images/cardlist/SD06/SD06-011.png">SD06</set>
+<related attach="1">Guardian Nun (Evolved)</related>
+<token>0</token>
+<tablerow>2</tablerow>
+</card>
+
+<card>
+<name>Hallowed Dogma</name>
+<text>[Quick] Look at 5 cards from the top of your deck. You may reveal an amulet from among them and add it to your hand. Put the rest on the bottom of your deck in any order.</text>
+<prop>
+<layout>normal</layout>
+<side>front</side>
+<type>Spell</type>
+<maintype>Spell</maintype>
+<manacost>1</manacost>
+<cmc>1</cmc>
+<colors>Haven</colors>
+<coloridentity>Haven</coloridentity>
+<format-standard>legal</format-standard>
+</prop>
+<set rarity="BR" num="013" uuid="013" muid="013" picurl="https://shadowverse-evolve.com/wordpress/wp-content/images/cardlist/SD06/SD06-013.png">SD06</set>
+<token>0</token>
+<tablerow>1</tablerow>
+</card>
+
+<card>
+<name>Death Sentence</name>
+<text>This card comes into play in the Act state. Main Phase: [Act this card and Put it into the graveyard]: Choose an enemy follower. Destroy it.</text>
+<prop>
+<layout>normal</layout>
+<side>front</side>
+<type>Amulet</type>
+<maintype>Amulet</maintype>
+<manacost>3</manacost>
+<cmc>3</cmc>
+<colors>Haven</colors>
+<coloridentity>Haven</coloridentity>
+<format-standard>legal</format-standard>
+</prop>
+<set rarity="BR" num="014" uuid="014" muid="014" picurl="https://shadowverse-evolve.com/wordpress/wp-content/images/cardlist/SD06/SD06-014.png">SD06</set>
+<token>0</token>
+<tablerow>2</tablerow>
+</card>
+
+<card>
+<name>Pinion Prayer</name>
+<text>Main Phase: [Pay 1pp and Act this card and Put it into the graveyard]: Summon a Holy Falcon.  [Holy Falcons are 3pp 2/2 Haven Bird followers with [Storm].]</text>
+<prop>
+<layout>normal</layout>
+<side>front</side>
+<type>Amulet</type>
+<maintype>Amulet</maintype>
+<manacost>1</manacost>
+<cmc>1</cmc>
+<colors>Haven</colors>
+<coloridentity>Haven</coloridentity>
+<format-standard>legal</format-standard>
+</prop>
+<set rarity="BR" num="015" uuid="015" muid="015" picurl="https://shadowverse-evolve.com/wordpress/wp-content/images/cardlist/SD06/SD06-015.png">SD06</set>
+<related>Holy Falcon</related>
+<token>0</token>
+<tablerow>2</tablerow>
+</card>
+
+<card>
+<name>Beastly Vow</name>
+<text>This card comes into play in the Act state. Main Phase: [Pay 1pp and Act this card and Put it into the graveyard]: Summon a Holyflame Tiger.  [Holyflame Tigers are 4pp 4/4 Haven Beast followers with [Rush].]</text>
+<prop>
+<layout>normal</layout>
+<side>front</side>
+<type>Amulet</type>
+<maintype>Amulet</maintype>
+<manacost>2</manacost>
+<cmc>2</cmc>
+<colors>Haven</colors>
+<coloridentity>Haven</coloridentity>
+<format-standard>legal</format-standard>
+</prop>
+<set rarity="BR" num="016" uuid="016" muid="016" picurl="https://shadowverse-evolve.com/wordpress/wp-content/images/cardlist/SD06/SD06-016.png">SD06</set>
+<related>Holyflame Tiger</related>
+<token>0</token>
+<tablerow>2</tablerow>
+</card>
+
+<card>
+<name>Angelic Sword Maiden</name>
+<text>[Ward] (When it comes into play or during your end phase, you can Act this card. Your opponent cannot attack anything other than followers with [Ward] in the Act state.)</text>
+<prop>
+<layout>normal</layout>
+<side>front</side>
+<type>Follower</type>
+<maintype>Follower</maintype>
+<manacost>5</manacost>
+<cmc>5</cmc>
+<colors>Neutral</colors>
+<coloridentity>Neutral</coloridentity>
+<format-standard>legal</format-standard>
+<pt>4/6</pt>
+</prop>
+<set rarity="BR" num="017" uuid="017" muid="017" picurl="https://shadowverse-evolve.com/wordpress/wp-content/images/cardlist/SD06/SD06-017.png">SD06</set>
+<token>0</token>
+<tablerow>2</tablerow>
+</card>
+
+<card>
+<name>Healing Angel</name>
+<text>Evolve (1): Evolve this follower. Fanfare: Add 1 to your leader's defense.</text>
+<prop>
+<layout>normal</layout>
+<side>front</side>
+<type>Follower</type>
+<maintype>Follower</maintype>
+<manacost>3</manacost>
+<cmc>3</cmc>
+<colors>Neutral</colors>
+<coloridentity>Neutral</coloridentity>
+<format-standard>legal</format-standard>
+<pt>2/4</pt>
+</prop>
+<set rarity="BR" num="018" uuid="018" muid="018" picurl="https://shadowverse-evolve.com/wordpress/wp-content/images/cardlist/SD06/SD06-018.png">SD06</set>
+<related attach="1">Healing Angel (Evolved)</related>
+<token>0</token>
+<tablerow>2</tablerow>
+</card>
+
+<card>
+<name>Angelic Snipe</name>
+<text>[Quick] Choose an enemy follower. Deal 2 damage to it.</text>
+<prop>
+<layout>normal</layout>
+<side>front</side>
+<type>Spell</type>
+<maintype>Spell</maintype>
+<manacost>1</manacost>
+<cmc>1</cmc>
+<colors>Neutral</colors>
+<coloridentity>Neutral</coloridentity>
+<format-standard>legal</format-standard>
+</prop>
+<set rarity="BR" num="020" uuid="020" muid="020" picurl="https://shadowverse-evolve.com/wordpress/wp-content/images/cardlist/SD06/SD06-020.png">SD06</set>
+<token>0</token>
+<tablerow>1</tablerow>
+</card>
+
+<card>
+<name>Priest of the Cudgel (Evolved)</name>
+<text>Evolve: Choose an enemy follower with 3 or less defense. Banish it.</text>
+<prop>
+<layout>normal</layout>
+<side>front</side>
+<type>Follower / Evolve</type>
+<maintype>Follower / Evolve</maintype>
+<manacost>-</manacost>
+<cmc>-</cmc>
+<colors>Haven</colors>
+<coloridentity>Haven</coloridentity>
+<format-standard>banned</format-standard>
+<pt>4/4</pt>
+</prop>
+<set rarity="SR" num="004" uuid="004" muid="004" picurl="https://shadowverse-evolve.com/wordpress/wp-content/images/cardlist/SD06/SD06-004.png">TK</set>
+<token>0</token>
+<tablerow>2</tablerow>
+</card>
+
+<card>
+<name>Ardent Nun (Evolved)</name>
+<text>[Ward] During your opponent's turn, this follower deals +2 damage.</text>
+<prop>
+<layout>normal</layout>
+<side>front</side>
+<type>Follower / Evolve</type>
+<maintype>Follower / Evolve</maintype>
+<manacost>-</manacost>
+<cmc>-</cmc>
+<colors>Haven</colors>
+<coloridentity>Haven</coloridentity>
+<format-standard>banned</format-standard>
+<pt>3/3</pt>
+</prop>
+<set rarity="BR" num="010" uuid="010" muid="010" picurl="https://shadowverse-evolve.com/wordpress/wp-content/images/cardlist/SD06/SD06-010.png">TK</set>
+<token>0</token>
+<tablerow>2</tablerow>
+</card>
+
+<card>
+<name>Guardian Nun (Evolved)</name>
+<text>[Ward] Evolve: Add 2 to your leader's defense.</text>
+<prop>
+<layout>normal</layout>
+<side>front</side>
+<type>Follower / Evolve</type>
+<maintype>Follower / Evolve</maintype>
+<manacost>-</manacost>
+<cmc>-</cmc>
+<colors>Haven</colors>
+<coloridentity>Haven</coloridentity>
+<format-standard>banned</format-standard>
+<pt>4/4</pt>
+</prop>
+<set rarity="BR" num="012" uuid="012" muid="012" picurl="https://shadowverse-evolve.com/wordpress/wp-content/images/cardlist/SD06/SD06-012.png">TK</set>
+<token>0</token>
+<tablerow>2</tablerow>
+</card>
+
+<card>
+<name>Healing Angel (Evolved)</name>
+<text>Evolve: Add 2 to your leader's defense.</text>
+<prop>
+<layout>normal</layout>
+<side>front</side>
+<type>Follower / Evolve</type>
+<maintype>Follower / Evolve</maintype>
+<manacost>-</manacost>
+<cmc>-</cmc>
+<colors>Neutral</colors>
+<coloridentity>Neutral</coloridentity>
+<format-standard>banned</format-standard>
+<pt>3/5</pt>
+</prop>
+<set rarity="BR" num="019" uuid="019" muid="019" picurl="https://shadowverse-evolve.com/wordpress/wp-content/images/cardlist/SD06/SD06-019.png">TK</set>
+<token>0</token>
+<tablerow>2</tablerow>
+</card>
+
+</cards>
+</cockatrice_carddatabase>
