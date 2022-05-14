@@ -2,14 +2,11 @@
 using namespace std;
 
 void solve() {
-	int n, m;
-	cin >> n >> m;
-	vector<vector<int>> color(n, vector<int>(m));
-	for (auto& vi: color) {
-		for (int& i: vi) {
-			cin >> i;
-		}
-	}
+	int a, b;
+	cin >> a >> b;
+	long double ans = (long double)a / 100 * b;
+	cout << setprecision(12) << fixed;
+	cout << ans << '\n';
 }
 
 int main() {

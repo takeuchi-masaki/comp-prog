@@ -2,13 +2,12 @@
 using namespace std;
 
 void solve() {
-	int n, m;
-	cin >> n >> m;
-	vector<vector<int>> color(n, vector<int>(m));
-	for (auto& vi: color) {
-		for (int& i: vi) {
-			cin >> i;
-		}
+	char c;
+	cin >> c;
+	if (c >= 'A' && c <= 'Z') {
+		cout << "A\n";
+	} else {
+		cout << "a\n";
 	}
 }
 

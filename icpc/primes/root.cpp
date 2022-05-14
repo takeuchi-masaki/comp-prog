@@ -24,6 +24,5 @@ int main(){
     }
 
     auto end = chrono::steady_clock::now();
-
     cout << "runtime: " << chrono::duration_cast<chrono::milliseconds>(end-start).count() << "ms\n";
 }

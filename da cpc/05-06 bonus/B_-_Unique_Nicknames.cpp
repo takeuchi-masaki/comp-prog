@@ -9,7 +9,9 @@ void solve() {
 	for (int i = 0; i < n; i++) {
 		cin >> name1[i] >> name2[i];
 		m[name1[i]]++;
-		m[name2[i]]++;
+		if (name1[i] != name2[i]) {
+			m[name2[i]]++;
+		}
 	}
 	for (int i = 0; i < n; i++) {
 		if (m[name1[i]] > 1 && m[name2[i]] > 1) {

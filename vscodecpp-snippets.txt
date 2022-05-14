@@ -22,7 +22,6 @@
 		],
 		"description": "c++ template"
 	},
-
 	"template": {
 		"prefix": "template",
 		"body": [
@@ -42,7 +41,6 @@
 		],
 		"description": "c++ template"
 	},
-	
 	"usaco training": {
 		"prefix": "usaco",
 		"body": [
@@ -64,32 +62,30 @@
 		],
 		"description": "usaco training template"
 	},
-
 	"google code contest": {
 		"prefix": "google",
 		"body": [
-		  "#include <bits/stdc++.h>",
-		  "using namespace std;",
-		  "",
-		  "void solve(){",
-		  "    $0",
-		  "",
-		  "}",
-		  "",
-		  "int main() {",
-		  "\tcin.tie(nullptr)->sync_with_stdio(false);",
-		  "    cin.exceptions(cin.failbit);",
-		  "    int T = 1;",
-		  "    cin >> T;",
-		  "    for(int i = 1; i <= T; i++) {",
-		  "        cout << \"Case #\" << i << \": \";",
-		  "        solve();",
-		  "    }",
-		  "}"
+			"#include <bits/stdc++.h>",
+			"using namespace std;",
+			"",
+			"void solve(){",
+			"    $0",
+			"",
+			"}",
+			"",
+			"int main() {",
+			"\tcin.tie(nullptr)->sync_with_stdio(false);",
+			"    cin.exceptions(cin.failbit);",
+			"    int T = 1;",
+			"    cin >> T;",
+			"    for(int i = 1; i <= T; i++) {",
+			"        cout << \"Case #\" << i << \": \";",
+			"        solve();",
+			"    }",
+			"}"
 		],
 		"description": "kickstart, codejam"
 	},
-	
 	"freopen": {
 		"prefix": "openfile",
 		"body": [
@@ -98,134 +94,130 @@
 		],
 		"description": "use file input output"
 	},
-
 	"ll": {
 		"prefix": "long long",
 		"body": " long long",
 		"description": "auto-complete long long"
 	},
-
 	"vector vector int": {
 		"prefix": "vvi",
 		"body": "vector<vector<int>> $1($2, vector<int>($3));",
 		"description": "vector vector int"
 	},
-
 	"vector vector long long": {
 		"prefix": "vvll",
 		"body": "vector<vector<long long>> $1($2, vector<long long>($3));",
 		"description": "vector vector long long"
 	},
-
 	"custom hash": {
 		"prefix": "custom hash",
 		"body": [
-		  "struct custom_hash {",
-		  "    size_t operator()(uint64_t x) const {",
-		  "        static const uint64_t FIXED_RANDOM = chrono::steady_clock::now().time_since_epoch().count();",
-		  "        x ^= FIXED_RANDOM;",
-		  "        return x ^ (x >> 16);",
-		  "    }",
-		  "};"
+			"struct custom_hash {",
+			"    size_t operator()(uint64_t x) const {",
+			"        static const uint64_t FIXED_RANDOM = chrono::steady_clock::now().time_since_epoch().count();",
+			"        x ^= FIXED_RANDOM;",
+			"        return x ^ (x >> 16);",
+			"    }",
+			"};"
 		],
 		"description": "custom hash"
 	},
-
 	"vector int": {
 		"prefix": "vi",
 		"body": "vector<int>",
 		"description": "vector int"
 	},
-
 	"vector long long": {
 		"prefix": "vll",
 		"body": "vector<long long>",
 		"description": "vector long long"
 	},
-
 	"popcount": {
 		"prefix": "popcount",
 		"body": "__builtin_popcount($0)",
 		"description": "g++ builtin popcount shortcut"
 	},
-
-	"pair int int":{
+	"pair int int": {
 		"prefix": "pii",
 		"body": "pair<int, int>",
 		"description": "pair int int"
 	},
-
-	"pair long long long long":{
+	"pair long long long long": {
 		"prefix": "pll",
 		"body": "pair<long long, long long>",
 		"description": "pair long long"
 	},
-
 	"sieve of eratosthenes prime": {
 		"prefix": "sieve",
 		"body": [
-		  "const int N = 1000000;",
-		  "int primes[N];",
-		  "vector<int> pr;",
-		  "",
-		  "void sieve(){",
-		  "    for(int i = 2; i < N; i++){",
-		  "        if(primes[i] == 0){",
-		  "            pr.push_back(i);",
-		  "            for(int j = i * i; j < N; j += i){",
-		  "                primes[j] = 1;",
-		  "            }",
-		  "        }",
-		  "        primes[i] ^= 1;",
-		  "    }",
-		  "}"
+			"const int N = 1000000;",
+			"int primes[N];",
+			"vector<int> pr;",
+			"",
+			"void sieve(){",
+			"    for(int i = 2; i < N; i++){",
+			"        if(primes[i] == 0){",
+			"            pr.push_back(i);",
+			"            for(int j = i * i; j < N; j += i){",
+			"                primes[j] = 1;",
+			"            }",
+			"        }",
+			"        primes[i] ^= 1;",
+			"    }",
+			"}"
 		],
 		"description": "prime sieve"
 	},
-
 	"size": {
 		"prefix": "sz",
 		"body": "(int)${1:s}.size()"
 	},
-	
 	"factorize": {
-	"prefix": "factorize",
-	"body": [
-		"map<long long, int> factorize(long long num) {",
-		"\tmap<long long, int> factors;",
-		"\twhile (num % 2 == 0) {",
-		"\t\tfactors[2]++;",
-		"\t\tnum >>= 1;",
-		"\t}",
-		"\tfor (long long i = 3; i * i <= num; i += 2) {",
-		"\t\twhile (num % i == 0) {",
-		"\t\t\tnum /= i;",
-		"\t\t\tfactors[i]++;",
-		"\t\t}",
-		"\t}",
-		"\tif (num != 1ll) factors[num]++;",
-		"\treturn factors;",
-		"}"
-	],
-	"description": "get factors of a number"
+		"prefix": "factorize",
+		"body": [
+			"map<long long, int> factorize(long long num) {",
+			"\tmap<long long, int> factors;",
+			"\twhile (num % 2 == 0) {",
+			"\t\tfactors[2]++;",
+			"\t\tnum >>= 1;",
+			"\t}",
+			"\tfor (long long i = 3; i * i <= num; i += 2) {",
+			"\t\twhile (num % i == 0) {",
+			"\t\t\tnum /= i;",
+			"\t\t\tfactors[i]++;",
+			"\t\t}",
+			"\t}",
+			"\tif (num != 1ll) factors[num]++;",
+			"\treturn factors;",
+			"}"
+		],
+		"description": "get factors of a number"
 	},
-
 	"powermod": {
-	"prefix": "powmod",
-	"body": [
-		"const int MOD = 1e9 + 7;",
-		"",
-		"long long modpow(long long base, long long exp) {",
-		"\tbase %= MOD;",
-		"\tlong long result = 1;",
-		"\twhile (exp > 0) {",
-		"\t\tif (exp & 1) result = (result * base) % MOD;",
-		"\t\tbase = (base * base) % MOD;",
-		"\t\texp >>= 1;",
-		"\t}",
-		"\treturn result;",
-		"}"
-	],
-	"description": "a^b % MOD, karatsuba multiplication"
+		"prefix": "powmod",
+		"body": [
+			"const int MOD = 1e9 + 7;",
+			"",
+			"long long modpow(long long base, long long exp) {",
+			"\tbase %= MOD;",
+			"\tlong long result = 1;",
+			"\twhile (exp > 0) {",
+			"\t\tif (exp & 1) result = (result * base) % MOD;",
+			"\t\tbase = (base * base) % MOD;",
+			"\t\texp >>= 1;",
+			"\t}",
+			"\treturn result;",
+			"}"
+		],
+		"description": "a^b % MOD, karatsuba multiplication"
+	},
+	"timer": {
+		"prefix": "timer",
+		"body": [
+			"auto start = chrono::steady_clock::now();",
+			"$0auto end = chrono::steady_clock::now();",
+			"cout << \"runtime: \" << chrono::duration_cast<chrono::milliseconds>(end-start).count() << \"ms\\n\";"
+		],
+		"description": "timer"
 	}
 }
