@@ -9,13 +9,10 @@ void solve() {
 		cout << "No\n";
 		return;
 	}
-	vector<int> diff1(n), diff2(n);
 	for (int i = 1; i < n; i++) {
-		diff1[i - 1] = (s[i] - s[i - 1] + 26) % 26;
-		diff2[i - 1] = (t[i] - t[i - 1] + 26) % 26;
-	}
-	for (int i = 0; i < n; i++) {
-		if (diff1[i] != diff2[i]) {
+		int diff1 = (s[i] - s[i - 1] + 26) % 26;
+		int diff2 = (t[i] - t[i - 1] + 26) % 26;
+		if (diff1 != diff2) {
 			cout << "No\n";
 			return;
 		}
