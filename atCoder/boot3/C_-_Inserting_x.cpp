@@ -31,10 +31,32 @@ void solve() {
 		}
 	}
 	if (isPalindrome) {
+		int ans = 0;
 		int st = 0, ed = (int)og.size() - 1;
 		int curr = 0;
 		while (og[st] == 'x') {
+			st++;
+			curr++;
 		}
+		while (og[ed] == 'x') {
+			ed--;
+			curr--;
+		}
+		ans += abs(curr);
+		while (st < ed) {
+			curr = 0;
+			while (og[st] == 'x') {
+				st++;
+				curr++;
+			}
+			while (og[ed] == 'x') {
+				ed--;
+				curr--;
+			}
+			ans += abs(curr);
+			st++, ed--;
+		}
+		cout << ans << '\n';
 	} else {
 		cout << "-1\n";
 	}

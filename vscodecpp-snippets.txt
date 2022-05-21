@@ -194,7 +194,10 @@
 		"description": "get factors of a number"
 	},
 	"powermod": {
-		"prefix": "powmod",
+		"prefix": [
+			"powmod",
+			"modpow"
+		],
 		"body": [
 			"const int MOD = 1e9 + 7;",
 			"",
@@ -210,6 +213,21 @@
 			"}"
 		],
 		"description": "a^b % MOD, karatsuba multiplication"
+	},
+	"power karatsuba": {
+		"prefix": "POW",
+		"body": [
+			"long long POW(long long base, long long exp) {",
+			"\tlong long result = 1;",
+			"\twhile (exp > 0) {",
+			"\t\tif (exp & 1) result *= base;",
+			"\t\tbase *= base;",
+			"\t\texp >>= 1;",
+			"\t}",
+			"\treturn result;",
+			"}"
+		],
+		"description": "pow(a, b), karatsuba multiplication"
 	},
 	"timer": {
 		"prefix": "timer",
