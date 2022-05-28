@@ -66,25 +66,11 @@ long long factmod(long long n){
     return result;
 }
 
-// ncr
-int nCr(int n, int r){
-    if(r>n) return 0;
-    return factmod(n) / (factmod(r)*factmod(n-r));
-}
+
 // npr
 int nPr(int n, int r){
 	if(r>n) return 0;
 	return factmod(n) / factmod(n-r);
-}
-// ncr2
-int nCr(int n, int r){
-	if(r>n) return 0;
-	long long ans = 1;
-	for(int i = 1; i <= r; i++){
-		ans *= n-i;
-		ans /= i;
-	}
-	return ans;
 }
 
 // pow mod karatsuba

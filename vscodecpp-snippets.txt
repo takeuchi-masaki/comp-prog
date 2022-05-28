@@ -132,6 +132,11 @@
 		"body": "vector<long long>",
 		"description": "vector long long"
 	},
+	"vector string": {
+		"prefix": "vs",
+		"body": "vector<string>",
+		"description": "vector string"
+	},
 	"popcount": {
 		"prefix": "popcount",
 		"body": "__builtin_popcount($0)",
@@ -237,5 +242,51 @@
 			"cout << \"runtime: \" << chrono::duration_cast<chrono::milliseconds>(end-start).count() << \"ms\\n\";"
 		],
 		"description": "timer"
+	},
+	"nCr": {
+		"prefix": [
+			"nCr",
+			"combination"
+		],
+		"body": [
+			"const int MOD = 1e9 + 7;",
+			"vector<long long> fact;",
+			"",
+			"void initFact(int n, int p) {",
+			"\tfact = vector<long long>(n + 1);",
+			"\tfact[0] = fact[1] = 1;",
+			"\tfor (int i = 2; i <= n; i++) {",
+			"\t\tfact[i] = fact[i - 1] * i;",
+			"\t\tfact[i] %= p;",
+			"\t}",
+			"}",
+			"",
+			"long long powmod(long long a, long long b, long long p) {",
+			"\ta %= p;",
+			"\tif (a == 0) return 0;",
+			"\tlong long product = 1;",
+			"\twhile (b > 0) {",
+			"\t\tif (b & 1) {",
+			"\t\t\tproduct *= a;",
+			"\t\t\tproduct %= p;",
+			"\t\t\t--b;",
+			"\t\t}",
+			"\t\ta *= a;",
+			"\t\ta %= p;",
+			"\t\tb >>= 1;",
+			"\t}",
+			"\treturn product;",
+			"}",
+			"",
+			"long long inv(long long a, long long p) {",
+			"\treturn powmod(a, p - 2, p);",
+			"}",
+			"",
+			"long long nCr(long long n, long long k, long long p) {",
+			"\tif (fact.empty()) initFact(n, p);",
+			"\treturn ((fact[n] * inv(fact[k], p) % p) * inv(fact[n - k], p)) % p;",
+			"}"
+		],
+		"description": "combination"
 	}
 }
