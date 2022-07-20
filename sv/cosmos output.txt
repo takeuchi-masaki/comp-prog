@@ -1,0 +1,30 @@
+4 pp:
+1 Conditions: 39.92%
+2 Conditions: 13.27%
+3 Conditions: 3.31%
+4 Conditions: 0.48%
+5 pp:
+1 Conditions: 49.99%
+2 Conditions: 22.16%
+3 Conditions: 8.33%
+4 Conditions: 2.38%
+6 pp:
+1 Conditions: 60.01%
+2 Conditions: 33.39%
+3 Conditions: 16.64%
+4 Conditions: 7.15%
+7 pp:
+1 Conditions: 69.92%
+2 Conditions: 46.64%
+3 Conditions: 29.15%
+4 Conditions: 16.68%
+8 pp:
+1 Conditions: 79.96%
+2 Conditions: 62.21%
+3 Conditions: 46.71%
+4 Conditions: 33.34%
+9 pp:
+1 Conditions: 90.06%
+2 Conditions: 80.07%
+3 Conditions: 70.03%
+4 Conditions: 60.00%
